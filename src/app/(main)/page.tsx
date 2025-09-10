@@ -8,7 +8,7 @@ export default function Page() {
                 <h2 className="kaushan lg:text-4xl md:text:2xl text-xl  ">My name is Mahmud Hasan Siddique. I am working as a</h2>
                 <h1 className="lg:text-8xl md:text-5xl text-4xl londrina font-extrabold text-transparent">Full Stack Developer</h1>
             </div>
-            <div>
+            <div className="">
                 <Image src={myImage} alt="" className="w-[26rem] mx-auto"></Image>
             </div>
         </div>
