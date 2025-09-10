@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import bgImage from "@/assists/bg.png";
-import myImage from "@/assists/myProfile.png";
+import myImage from "@/assists/myProfile1.png";
 import Image from "next/image";
+import Navbar from "@/components/Navbar/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,13 +31,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-        <div className="absolute top-0 left-0 right-0 bottom-0 z-[-1]">
-          <Image src={bgImage} alt=""></Image>
+        <div className="absolute top-0 left-0 right-0 bottom-0 min-h-screen">
+          <Image src={bgImage} alt="" className="w-full h-screen object-none"></Image>
         </div>
-        {children}
+        <div className="relative container text-white top-20">
+          {children}
+        </div>
+        <div className="relative text-white container top-10 bottom-0 ">
+          <Navbar></Navbar>
+        </div>
       </body>
     </html>
   );

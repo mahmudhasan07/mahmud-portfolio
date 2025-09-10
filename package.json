@@ -1,9 +1,9 @@
 {
-  "name": "helper-dashboard",
+  "name": "mahmud-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3005 --turbopack",
+    "dev": "next dev  --turbopack",
     "build": "next build",
     "start": "next start -p 3005",
     "lint": "next lint",
