@@ -41,12 +41,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
         <div className="absolute top-0 left-0 right-0 bottom-0 min-h-screen">
-          <Image src={bgImage} alt="" className="w-full h-screen object-none"></Image>
+          <Image src={bgImage} alt="" className="h-full object-none"></Image>
         </div>
-        <div className="relative container text-white top-20">
+        <div className="relative container text-white top-16">
           {children}
         </div>
-        <div className="relative text-white container top-10 bottom-0 ">
+        <div className="relative text-white container top-2 bottom-0 ">
           <Navbar></Navbar>
         </div>
       </body>

@@ -9,7 +9,7 @@ export default function Page() {
                 <h1 className="lg:text-8xl md:text-5xl text-4xl londrina font-extrabold text-transparent">Full Stack Developer</h1>
             </div>
             <div>
-                <Image src={myImage} alt="" className="w-[25rem] mx-auto"></Image>
+                <Image src={myImage} alt="" className="w-[26rem] mx-auto"></Image>
             </div>
         </div>
     );
