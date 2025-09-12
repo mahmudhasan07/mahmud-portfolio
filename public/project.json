@@ -1,0 +1,32 @@
+[
+   {
+    "name": "",
+    "description": "A Full stack web app of furniture resale market. The Personal is a full stack website built by React JS, Node JS, Express JS and MongoDB. This is a resale product website that focuses on furniture. Three types of user are available in this web app such as Admin, Buyer & Seller.",
+    "clientName": "The Personal",
+    "releaseDate": "28 November, 2022",
+    "projectType": "Website",
+    "links": {
+      "github": "View Github",
+      "liveWebsite": "Live Website"
+    },
+    "projectImage": [
+        
+    ],
+    "coreFeatures": [
+      "This is furniture resale website",
+      "Three types of user available here (Admin, Buyer, Seller)",
+      "Admin can do - Manage User, manage Products and get flag report",
+      "Seller can post product, advertise product, modify and delete product",
+      "Buyer can do make order and add products to wish list",
+      "This website has a review section in where buyer can post review",
+      "Four Blog post included"
+    ],
+    "buildWith": [
+      "React Router Dom v6.4",
+      "Firebase Authentication",
+      "Tailwind CSS",
+      "Daisy UI",
+      "React Sweet Alert"
+    ]
+  }
+]
