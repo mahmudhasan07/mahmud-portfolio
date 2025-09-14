@@ -25,15 +25,14 @@ textarea {
 .borderNew {
   border: 2px solid transparent; /* base border */
   border-radius: 12px;
-  background: 
-    linear-gradient(#1a1a1a, #1a1a1a) padding-box, /* inner background */
-    linear-gradient(90deg, red, blue, purple, red) border-box; /* border gradient */
-  
+  background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
+    /* inner background */ linear-gradient(90deg, #F51B1B, #6D68FF, #8a86f0, #F51B1B)
+      border-box; /* border gradient */
+
   background-size: 100% 100%, 300% 300%; /* first layer fixed, second animated */
   background-repeat: no-repeat;
-  
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6), 
-              0 0 15px rgba(0, 0, 255, 0.6);
+
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6), 0 0 15px rgba(0, 0, 255, 0.6);
   text-align: center;
 
   animation: borderMove 6s linear infinite;
@@ -51,3 +50,6 @@ textarea {
   }
 }
 
+.bgcolor {
+  background: linear-gradient(90deg, #f51b1b, #6d68ff);
+}
