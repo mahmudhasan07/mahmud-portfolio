@@ -11,7 +11,7 @@ const Education = () => {
 
                 {
                     education.map((item, idx) =>
-                        <div className='space-y-2 p-5 borderNew text-start' key={idx}>
+                        <div className='space-y-2 p-5 borderNew2 text-start' key={idx}>
                             <div className='flex justify-between'>
                                 <div>
                                     <h2 className='text-2xl font-semibold'>{item.title}</h2>
