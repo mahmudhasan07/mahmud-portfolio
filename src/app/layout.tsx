@@ -46,7 +46,7 @@ export default function RootLayout({
         <div className="relative container text-white top-16">
           {children}
         </div>
-        <div className="relative text-white container top-6 bottom-0 ">
+        <div className="relative text-white container top-10 bottom-0 ">
           <Navbar></Navbar>
         </div>
       </body>
