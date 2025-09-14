@@ -9,7 +9,7 @@ const Navbar = () => {
 
     const routes = [
         {route : "/", name: "Home"},
-        {route : "/Portfolio", name: "Portfolio"},
+        {route : "/portfolio", name: "Portfolio"},
         {route : "/resume", name: "Resume"},
         {route : "/contact", name: "Contact Me"},
     ]
