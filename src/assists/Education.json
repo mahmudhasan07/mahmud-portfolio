@@ -9,7 +9,7 @@
         "outOf" : "4.00"
     },
     {
-        "name": "HSC",
+        "title": "HSC",
         "institution": "Birshreshtha Noor Mohammad Public College",
         "startDate": "2016",
         "endDate": "2018",
@@ -17,7 +17,7 @@
         "outOf" : "5.00"
     },
     {
-        "name": "SSC",
+        "title": "SSC",
         "institution": "Motijheel Model High School And College",
         "startDate": "2014",
         "endDate": "2016",
