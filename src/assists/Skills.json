@@ -2,27 +2,27 @@
   "skills": {
     "Languages": [
       { "name": "JavaScript", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472896/protfolio/js-javascript-round-logo-icon-png-7017516947717339mnyf7eumy_osb7qd.png" },
-      { "name": "HTML", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472895/protfolio/png-clipart-html-logo-html5-logo-icons-logos-emojis-tech-companies-thumbnail_kyniae.png" },
-      { "name": "CSS", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472895/protfolio/100-1006307_bootstrap-social-media-icons-logo-css-clipart_t2zal9.jpg" }
+      { "name": "HTML", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477252/protfolio/trans/png-clipart-html-logo-html5-logo-icons-logos-emojis-tech-companies-thumbnail-removebg-preview_vzmj2a.png" },
+      { "name": "CSS", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477252/protfolio/trans/100-1006307_bootstrap-social-media-icons-logo-css-clipart-removebg-preview_tgn59u.png" }
     ],
     "Frameworks": [
-        { "name": "React", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472895/protfolio/png-transparent-react-react-native-logos-brands-in-colors-icon-thumbnail_jejua7.png" },
-      { "name": "Vue", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472895/protfolio/png-transparent-vuejs-original-wordmark-logo-icon-thumbnail_nueozc.png" },
+        { "name": "React", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477252/protfolio/trans/png-transparent-react-react-native-logos-brands-in-colors-icon-thumbnail-removebg-preview_dzfe3z.png" },
+      { "name": "Vue", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477252/protfolio/trans/png-transparent-vuejs-original-wordmark-logo-icon-thumbnail-removebg-preview_ijmyl5.png" },
       { "name": "Next.js", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472895/protfolio/next_js_ajwklg.jpg" },
-      { "name": "Express", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472895/protfolio/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo-thumbnail_ua6ug2.png" }
+      { "name": "Express", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477253/protfolio/trans/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo-thumbnail-removebg-preview_ebyzio.png" }
     ],
     "Backend Development": [
       { "name": "Node.js", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477253/protfolio/trans/node-js-javascript-web-application-express-js-computer-software-others-removebg-preview_xckcva.png" }
     ],
     "Database": [
-      { "name": "MongoDB", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472894/protfolio/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail_yucfpb.png" },
+      { "name": "MongoDB", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477253/protfolio/trans/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail-removebg-preview_una939.png" },
       { "name": "Mongoose", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477253/protfolio/trans/png-transparent-mongoose-hd-logo-removebg-preview_eeol9a.png" },
-      { "name": "MySQL", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472894/protfolio/mysql-logo-png-image-11660514413jvwkcjh4av_ri2nbs.png" },
+      { "name": "MySQL", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477253/protfolio/trans/mysql-logo-png-image-11660514413jvwkcjh4av-removebg-preview_eckjby.png" },
       { "name": "DynamoDB", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472892/protfolio/DynamoDB_afnojl.png" }
     ],
     "Tools and Libraries": [
       { "name": "Redux", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472893/protfolio/redux_birnjf.png" },
-      { "name": "Axios", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472894/protfolio/62-627407_axios-logo-hd-png-download_drazp6.jpg" },
+      { "name": "Axios", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477254/protfolio/trans/62-627407_axios-logo-hd-png-download-removebg-preview_ll9tww.png" },
       { "name": "Material-UI", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477255/protfolio/trans/png-transparent-material-ui-logo-removebg-preview_yigc04.png" },
       { "name": "Bootstrap", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477255/protfolio/trans/png-clipart-bootstrap-logo-thumbnail-tech-companies-thumbnail-removebg-preview_pft40u.png" },
       { "name": "Framer Motion", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472893/protfolio/framer-motion-logo-png_seeklogo-446185_rgw0ru.png" },
