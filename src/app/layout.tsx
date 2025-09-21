@@ -5,6 +5,7 @@ import bgImage from "@/assists/bg.png";
 import myImage from "@/assists/myProfile1.png";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
+import ParticlesBackground from "@/components/ParticlesBackground/ParticlesBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -57,6 +58,8 @@ export default function RootLayout({
         <div className="absolute top-0 left-0 right-0 bottom-0 min-h-screen">
           <Image src={bgImage} alt="" className="h-full object-none"></Image>
         </div>
+        <ParticlesBackground />
+
         <div className="relative container text-white pt-16">
           {children}
         </div>
