@@ -5,7 +5,7 @@ import education from '@/assists/Education.json';
 const Education = () => {
     return (
         <section>
-            <h1 className='text-4xl font-bold mb-5'>Education Qualification</h1>
+            <h1 className='text-4xl font-bold my-5'>Education Qualification</h1>
 
             <div className='space-y-5'>
 

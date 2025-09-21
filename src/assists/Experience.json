@@ -1,0 +1,71 @@
+[
+    {
+        "company": "SM Technology",
+        "location": "Dhaka, Bangladesh",
+        "positions": [
+            {
+                "title": "Full Stack Developer",
+                "employmentType": "Full-time",
+                "startDate": "2024-10",
+                "endDate": "Present",
+                "duration": "1 yr",
+                "description": "Developed mobile apps and admin dashboards, landing pages, and front-end designs. Worked on challenging projects, collaborating with talented individuals, and strengthened skills in web development to deliver impactful solutions.",
+                "skills": [
+                    "TypeScript",
+                    "Node.js",
+                    "Express.js",
+                    "Prisma ORM",
+                    "MongoDB",
+                    "MySQL",
+                    "JSON Web Token (JWT)",
+                    "REST APIs",
+                    "Next.js",
+                    "React",
+                    "Stripe (Software)",
+                    "Customer Relationship Management (CRM)"
+                ]
+            }
+        ]
+    },
+    {
+        "company": "E-Learning and Training Ltd",
+        "location": "Dhaka, Bangladesh",
+        "positions": [
+            {
+                "title": "MERN Stack Trainer",
+                "employmentType": "Contract",
+                "startDate": "2024-0",
+                "endDate": "2024-09",
+                "duration": "1 mo",
+                "description": "Trained budding MERN stack developers in a professional environment. The program covered basics to advanced lessons in React, Node.js, Express.js, MongoDB, and Redux.",
+                "skills": [
+                    "Tailwind CSS",
+                    "Express.js",
+                    "Node.js",
+                    "React.js",
+                    "MERN Stack",
+                    "MongoDB"
+                ]
+            }
+        ]
+    },
+    {
+        "company": "Upwork",
+        "location": "Dhaka, Bangladesh (Remote)",
+        "positions": [
+            {
+                "title": "Web Developer",
+                "employmentType": "Freelance",
+                "startDate": "2023-10",
+                "endDate": "2024-08",
+                "duration": "8 mos",
+                "description": "Assisted in developing full-stack applications using MongoDB, Express.js, React.js, Node.js, and front-end features. Conducted debugging and testing to enhance user experience.",
+                "skills": [
+                    "Front-End Development",
+                    "MERN Stack",
+                    "Full-Stack Development"
+                ]
+            }
+        ]
+    }
+]

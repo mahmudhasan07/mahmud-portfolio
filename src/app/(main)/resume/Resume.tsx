@@ -28,11 +28,11 @@ const Resume = () => {
             <div className='flex gap-5'>
                 {
                     tabs.map((tab) => (
-                        <button key={tab} onClick={() => setActiveTab(tab)} className={`w-full text-xl py-4 borderNew2 font-semibold ${activeTab == tab ? "text-secondary" : ""}`}>{tab}</button>
+                        <button key={tab} onClick={() => setActiveTab(tab)} className={`w-full text-lg py-4 borderNew2 font-semibold ${activeTab == tab ? "text-secondary" : ""}`}>{tab}</button>
                     ))
                 }
             </div>
-            <div className='my-10'>
+            <div className=''>
                 {
                     render()
                 }

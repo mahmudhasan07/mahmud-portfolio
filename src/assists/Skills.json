@@ -1,0 +1,38 @@
+{
+  "skills": {
+    "Languages": [
+      { "name": "JavaScript", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472896/protfolio/js-javascript-round-logo-icon-png-7017516947717339mnyf7eumy_osb7qd.png" },
+      { "name": "HTML", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472895/protfolio/png-clipart-html-logo-html5-logo-icons-logos-emojis-tech-companies-thumbnail_kyniae.png" },
+      { "name": "CSS", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472895/protfolio/100-1006307_bootstrap-social-media-icons-logo-css-clipart_t2zal9.jpg" }
+    ],
+    "Frameworks": [
+        { "name": "React", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472895/protfolio/png-transparent-react-react-native-logos-brands-in-colors-icon-thumbnail_jejua7.png" },
+      { "name": "Vue", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472895/protfolio/png-transparent-vuejs-original-wordmark-logo-icon-thumbnail_nueozc.png" },
+      { "name": "Next.js", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472895/protfolio/next_js_ajwklg.jpg" },
+      { "name": "Express", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472895/protfolio/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo-thumbnail_ua6ug2.png" }
+    ],
+    "Backend Development": [
+      { "name": "Node.js", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477253/protfolio/trans/node-js-javascript-web-application-express-js-computer-software-others-removebg-preview_xckcva.png" }
+    ],
+    "Database": [
+      { "name": "MongoDB", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472894/protfolio/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail_yucfpb.png" },
+      { "name": "Mongoose", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477253/protfolio/trans/png-transparent-mongoose-hd-logo-removebg-preview_eeol9a.png" },
+      { "name": "MySQL", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472894/protfolio/mysql-logo-png-image-11660514413jvwkcjh4av_ri2nbs.png" },
+      { "name": "DynamoDB", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472892/protfolio/DynamoDB_afnojl.png" }
+    ],
+    "Tools and Libraries": [
+      { "name": "Redux", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472893/protfolio/redux_birnjf.png" },
+      { "name": "Axios", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472894/protfolio/62-627407_axios-logo-hd-png-download_drazp6.jpg" },
+      { "name": "Material-UI", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477255/protfolio/trans/png-transparent-material-ui-logo-removebg-preview_yigc04.png" },
+      { "name": "Bootstrap", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477255/protfolio/trans/png-clipart-bootstrap-logo-thumbnail-tech-companies-thumbnail-removebg-preview_pft40u.png" },
+      { "name": "Framer Motion", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758472893/protfolio/framer-motion-logo-png_seeklogo-446185_rgw0ru.png" },
+      { "name": "TanStack Query", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477256/protfolio/trans/react-query-logo-vector--comseeklogo435661-removebg-preview_na8cd8.png" }
+    ],
+    "Security and Authentication": [
+      { "name": "Firebase", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477256/protfolio/trans/firebase-logo-11609361103azdpszm85x-removebg-preview_lqm8wq.png" },
+      { "name": "Auth0", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477257/protfolio/trans/png-transparent-auth0-hd-logo-removebg-preview_ftwcy6.png" },
+      { "name": "AWS Cognito", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477257/protfolio/trans/73-732011_aws-cognito-logo-png-transparent-aws-cognito-icon-removebg-preview_faa9up.png" },
+      { "name": "JWT", "image": "https://res.cloudinary.com/daudgshta/image/upload/v1758477258/protfolio/trans/png-transparent-jwt-hd-logo-removebg-preview_dqnjmp.png" }
+    ]
+  }
+}

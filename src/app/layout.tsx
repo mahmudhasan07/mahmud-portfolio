@@ -55,15 +55,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen`}
       >
-        <div className="absolute top-0 left-0 right-0 bottom-0 min-h-screen">
+        <div className="absolute top-0 left-0 right-0 bottom-0 ">
           <Image src={bgImage} alt="" className="h-full object-none"></Image>
         </div>
         <ParticlesBackground />
 
-        <div className="relative container text-white pt-16">
+        <div className="relative container text-white pt-16 pb-2">
           {children}
         </div>
-        <div className="absolute text-white container mx-auto w-fit left-1/2 -translate-x-1/2  bottom-5 ">
+        <div className="fixed text-white container mx-auto w-fit left-1/2 -translate-x-1/2  bottom-5 ">
           <Navbar></Navbar>
         </div>
       </body>
