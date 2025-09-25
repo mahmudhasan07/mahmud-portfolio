@@ -70,3 +70,19 @@ textarea {
 .bgcolor {
   background: linear-gradient(90deg, #f51b1b, #6d68ff);
 }
+
+input {
+ background: linear-gradient(
+  to bottom,           /* direction */
+  #000000,             /* start color: black */
+  rgba(102, 102, 102, 0.2) /* end color: gray with 20% opacity */
+);
+}
+
+textarea {
+ background: linear-gradient(
+  to bottom,           /* direction */
+  #000000,             /* start color: black */
+  rgba(102, 102, 102, 0.2) /* end color: gray with 20% opacity */
+);
+}
