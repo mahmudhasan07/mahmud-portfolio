@@ -1,32 +1,138 @@
 [
-   {
-    "name": "",
-    "description": "A Full stack web app of furniture resale market. The Personal is a full stack website built by React JS, Node JS, Express JS and MongoDB. This is a resale product website that focuses on furniture. Three types of user are available in this web app such as Admin, Buyer & Seller.",
-    "clientName": "The Personal",
-    "releaseDate": "28 November, 2022",
-    "projectType": "Website",
-    "links": {
-      "github": "View Github",
-      "liveWebsite": "Live Website"
-    },
-    "projectImage": [
-        
+  {
+    "title": "Nutrigenix",
+    "date": "Dec 2024",
+    "website-link" : "",
+    "playStore-link" : "",
+    "appStore-link" : "",
+    "description": "Here is my latest terminal-based project, which operates like a command prompt. It also includes typing animations to enhance the appearance, similar to a traditional command prompt. This project is built using Next.js.",
+    "features": [
+      "Frontend designed with interactive UI using React and Framer Motion",
+      "AOS (Animate On Scroll) enhances scrolling experience with delightful animations"
     ],
-    "coreFeatures": [
-      "This is furniture resale website",
-      "Three types of user available here (Admin, Buyer, Seller)",
-      "Admin can do - Manage User, manage Products and get flag report",
-      "Seller can post product, advertise product, modify and delete product",
-      "Buyer can do make order and add products to wish list",
-      "This website has a review section in where buyer can post review",
-      "Four Blog post included"
+    "technologies": [
+      "Next.js",
+      "Framer Motion"
+    ]
+  },
+  {
+    "title": "Talk of Time",
+    "date": "Apr 2024",
+    "website-link" : "https://todays-shop-19h41.vercel.app",
+    "playStore-link" : "",
+    "appStore-link" : "",
+    "description": "A new website powered by React and Node.js, featuring captivating animations with Framer Motion and AOS. It ensures a seamless user experience with smooth navigation and dynamic content updates.",
+    "features": [
+      "Backend built with Node.js and Express for robust handling and MySQL for database",
+      "Frontend designed with interactive UI using React and Framer Motion",
+      "AOS (Animate On Scroll) enhances scrolling experience with delightful animations",
+      "Search from job section, working on backend"
     ],
-    "buildWith": [
-      "React Router Dom v6.4",
-      "Firebase Authentication",
-      "Tailwind CSS",
-      "Daisy UI",
-      "React Sweet Alert"
+    "technologies": [
+      "React",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "AOS",
+      "Framer Motion"
+    ]
+  },
+  {
+    "title": "ZingSeat World",
+    "date": "Feb 2024",
+    "website-link" : "https://zingseat-app.vercel.app",
+    "playStore-link" : "",
+    "appStore-link" : "",
+    "description": "An e-commerce platform where users can browse products or register as sellers. Built to deliver smooth product management and secure checkout.",
+    "features": [
+      "User and seller panels with login/signup system",
+      "Advanced product search and filtering",
+      "Add to cart and order tracking",
+      "JWT authentication for secure access"
+    ],
+    "technologies": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "AOS",
+      "HTML",
+      "CSS"
+    ]
+  },
+  {
+    "title": "Coffee House",
+    "date": "Feb 2024",
+    "website-link" : "https://coffee-house-db-nu.vercel.app",
+    "playStore-link" : "",
+    "appStore-link" : "",
+    "description": "A basic web project created after learning MySQL integration with Node.js and Express. Showcases CRUD functionality with a simple interface.",
+    "features": [
+      "View coffee items and details",
+      "Add and delete coffee records",
+      "Fully functional CRUD operations"
+    ],
+    "technologies": [
+      "Node.js",
+      "Express",
+      "MySQL",
+      "EJS",
+      "Vanilla CSS"
+    ]
+  },
+  {
+    "title": "NovoNest Residences",
+    "date": "Dec 2023",
+    "website-link" : "https://novonest.vercel.app",
+    "playStore-link" : "",
+    "appStore-link" : "",
+    "description": "An apartment owner’s website for managing flat rents and maintenance. Includes multi-user authentication and an admin dashboard.",
+    "features": [
+      "Apartment listings with rent information",
+      "Multi-user system (Owner, Member, Admin)",
+      "Admin can add flats and view all members",
+      "JWT-secured authentication"
+    ],
+    "technologies": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Material-UI",
+      "AOS",
+      "REST APIs",
+      "JSON Web Token"
+    ]
+  },
+  {
+    "title": "Speed Of Creativity",
+    "date": "Dec 2023",
+    "website-link" : "https://speed-of-creativity.vercel.app",
+    "playStore-link" : "",
+    "appStore-link" : "",
+    "description": "An online platform for learning coding where users can create and complete coding assignments and challenges.",
+    "technologies": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "AOS",
+      "REST APIs"
+    ]
+  },
+  {
+    "title": "PakeHeart Yoga",
+    "date": "Oct 2023",
+    "website-link" : "https://pakeheart-yoga.vercel.app",
+    "playStore-link" : "",
+    "appStore-link" : "",
+    "description": "An online educational website where admins can add class-recorded videos and users can bookmark their favorites.",
+    "technologies": [
+      "React",
+      "MongoDB",
+      "HTML",
+      "CSS"
     ]
   }
 ]
