@@ -1,6 +1,30 @@
 [
   
   {
+    "title": "Fidden",
+    "date": "February 2025",
+    "website-link" : "https://fidden.io",
+    "playStore-link" : "",
+    "appStore-link" : "",
+    "description": "Fidden is a salon booking backend system designed to let users easily schedule salon appointments at their preferred time and date. It also supports salon-side management, allowing salon owners to control their availability, view bookings, and manage services.",
+    "features": [
+      "Secure authentication using JWT",
+      "Users and Salon owners can update their personal information and preferences.",
+      "For salon owners, manage working hours and block out unavailable dates.",
+      "For users, create, update, cancel, or view current and past appointments.",
+      "For salon owners, View and manage all customer bookings in real time."
+    ],
+    "technologies": [
+      "Next.js (Landing page)",
+      "Node.js (Backend)",
+      "Express (Backend)",
+      "MongoDB (Database)",
+      "JWT (Authentication)",
+      "TypeScript (TypeScript)",
+      "Fluent UI (UI Framework)"
+    ]
+  },
+  {
     "title": "Nutrigenix",
     "date": "Dec 2024",
     "website-link" : "",
