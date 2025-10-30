@@ -1,39 +1,233 @@
 [
-  
   {
-    "title": "Fidden",
-    "date": "February 2025",
-    "website-link" : "https://fidden.io",
-    "playStore-link" : "",
-    "appStore-link" : "",
-    "description": "Fidden is a salon booking backend system designed to let users easily schedule salon appointments at their preferred time and date. It also supports salon-side management, allowing salon owners to control their availability, view bookings, and manage services.",
+    "title": "Pourmoi",
+    "date": "September 2025",
+    "website-link": "https://www.pourmoi.ca",
+    "playStore-link": "",
+    "appStore-link": "",
+    "description": "Pourmoi is an online food ordering platform that allows users to place meal orders or create offers for restaurants. After placing an order, users receive a digital token for easy pickup. The platform simplifies restaurant operations by enabling administrators to manage categories, menu items, and orders efficiently, with secure payment integration for a smooth user experience.",
+    "role": "Backend Developer",
+    "responsibilities": [
+      "Developed and maintained backend APIs using Node.js, Express, and TypeScript",
+      "Designed and managed database schemas using Prisma ORM with MongoDB",
+      "Implemented JWT-based authentication and authorization for users and admins",
+      "Integrated Stripe for secure online payments and order processing",
+      "Built endpoints for food ordering, token generation, and restaurant management",
+      "Worked closely with the frontend team to ensure seamless API integration and performance",
+      "Optimized server logic and data handling to improve response time and scalability"
+    ],
     "features": [
-      "Secure authentication using JWT",
-      "Users and Salon owners can update their personal information and preferences.",
-      "For salon owners, manage working hours and block out unavailable dates.",
-      "For users, create, update, cancel, or view current and past appointments.",
-      "For salon owners, View and manage all customer bookings in real time."
+      "Simple and efficient food ordering and token-based pickup system",
+      "Automatic token generation after successful order placement",
+      "Admin panel for category, menu, and order management",
+      "Secure payment integration using Stripe",
+      "Responsive and user-friendly restaurant management workflow"
     ],
     "technologies": [
-      "Next.js (Landing page)",
       "Node.js (Backend)",
+      "TypeScript (Backend)",
       "Express (Backend)",
       "MongoDB (Database)",
+      "Prisma (ORM)",
       "JWT (Authentication)",
-      "TypeScript (TypeScript)",
-      "Fluent UI (UI Framework)"
+      "Stripe (Payment Gateway)"
     ]
   },
   {
-    "title": "Nutrigenix",
-    "date": "Dec 2024",
-    "website-link" : "",
-    "playStore-link" : "",
-    "appStore-link" : "",
-    "description": "Here is my latest terminal-based project, which operates like a command prompt. It also includes typing animations to enhance the appearance, similar to a traditional command prompt. This project is built using Next.js.",
+    "title": "Profit Doctor",
+    "date": "September 2025",
+    "website-link": "https://myprofitdoctor.com",
+    "playStore-link": "",
+    "appStore-link": "",
+    "description": "Profit Doctor is a professional consulting platform in the field of aesthetic medicine. Its mission is to empower aesthetic clinics and private equity partners with expert consulting, operational optimization, and strategic growth guidance. The platform simplifies client engagement with features like online appointment booking, admin management, and detailed treatment information.",
+    "role": "Full Stack Developer (Frontend & Backend)",
+    "responsibilities": [
+      "Developed and deployed both frontend and backend of the platform",
+      "Built responsive and SEO-friendly frontend using Next.js",
+      "Implemented animations and smooth user interactions for a professional UI experience",
+      "Developed RESTful APIs using Node.js, Express, and TypeScript",
+      "Integrated MongoDB with Prisma ORM for efficient and structured database management",
+      "Implemented JWT-based authentication for secure user and admin access",
+      "Integrated Stripe for online payment handling and appointment booking",
+      "Collaborated with the design and consulting teams to ensure user-friendly workflows and data accuracy"
+    ],
     "features": [
-      "Frontend designed with interactive UI using React and Framer Motion",
-      "AOS (Animate On Scroll) enhances scrolling experience with delightful animations"
+      "Online appointment booking system with admin confirmation",
+      "Comprehensive service listings for aesthetic treatments",
+      "Secure authentication and user management",
+      "Payment integration for consultation and service bookings",
+      "Responsive, user-friendly interface for desktop and mobile devices"
+    ],
+    "technologies": [
+      "Next.js (Frontend)",
+      "Node.js (Backend)",
+      "TypeScript (Backend)",
+      "Express (Backend)",
+      "MongoDB (Database)",
+      "Prisma (ORM)",
+      "JWT (Authentication)",
+      "Stripe (Payment Gateway)"
+    ]
+  },
+  {
+    "title": "Abroad App",
+    "date": "September 2025",
+    "website-link": "",
+    "playStore-link": "",
+    "appStore-link": "https://apps.apple.com/us/app/abroad-app/id6752798049",
+    "description": "Abroad is a travel companion app designed to help users record, organize, and relive their journeys. From tracking visited countries to managing trips, journals, and personal travel data, Abroad provides a seamless experience for travelers who want to keep their adventures organized and memorable.",
+    "role": "Backend Developer",
+    "responsibilities": [
+      "Developed and maintained backend services using Node.js, Express, and TypeScript",
+      "Designed and implemented RESTful APIs for trip, journal, and profile management",
+      "Integrated Prisma ORM with MongoDB for efficient data modeling and queries",
+      "Implemented secure authentication and authorization using JWT",
+      "Built endpoints for world map tracking and travel history data synchronization",
+      "Integrated payment handling using Stripe for premium travel features",
+      "Collaborated with frontend and mobile teams to ensure smooth API integration and performance"
+    ],
+    "features": [
+      "World Map Tracking: View all visited countries highlighted in vibrant colors",
+      "Trip Management: Add, edit, or delete trips effortlessly",
+      "Personal Journal: Record and update travel memories anytime",
+      "Country Highlights: Display visited countries with colorful markers and map icons",
+      "Profile & Info: Manage personal travel details with ease",
+      "Travel History: Keep a complete log of all explored destinations"
+    ],
+    "technologies": [
+      "Node.js (Backend)",
+      "TypeScript (Backend)",
+      "Express (Backend)",
+      "MongoDB (Database)",
+      "Prisma (ORM)",
+      "JWT (Authentication)",
+      "Stripe (Payment Gateway)"
+    ]
+  },
+  {
+    "title": "ProBanesa",
+    "date": "August 2025",
+    "website-link": "",
+    "playStore-link": "https://play.google.com/store/apps/details?id=com.building_management.user",
+    "appStore-link": "https://apps.apple.com/us/app/probanesa-building-manager/id6748986825",
+    "description": "ProBanesa is a comprehensive building management platform designed for administrators, residents, and businesses to simplify operations, communication, and compliance in residential complexes. It streamlines everything from managing payments and sending notifications to maintaining centralized building data — all within one secure platform.",
+    "role": "Backend Developer",
+    "responsibilities": [
+      "Developed and maintained backend APIs using Node.js, Express, and TypeScript",
+      "Designed database schemas and models using Prisma ORM with MongoDB",
+      "Implemented secure authentication and authorization using JWT",
+      "Integrated Stripe for automated monthly billing and payment management",
+      "Built automated monthly report generation and email delivery system for admins",
+      "Optimized backend performance and ensured scalability for multi-building management",
+      "Collaborated closely with frontend and mobile teams to ensure smooth API integration"
+    ],
+    "features": [
+      "Administrators create accounts, register buildings, and invite residents",
+      "Residents sign up and complete their profiles for a personalized experience",
+      "Automatic monthly report generation and email delivery to administrators",
+      "Simplified payment management, notifications, and two-way communication",
+      "Centralized data storage for buildings, residents, and businesses",
+      "Accurate records for all user types with secure data access"
+    ],
+    "technologies": [
+      "Node.js (Backend)",
+      "TypeScript (Backend)",
+      "Express (Backend)",
+      "MongoDB (Database)",
+      "Prisma (ORM)",
+      "JWT (Authentication)",
+      "Stripe (Payment Gateway)"
+    ]
+  },
+  {
+    "title": "Neo Wash",
+    "date": "May 2025",
+    "website-link": "",
+    "playStore-link": "https://play.google.com/store/apps/details?id=com.neowash.user.neowash&pcampaignid=web_share",
+    "appStore-link": "https://apps.apple.com/ae/app/neo-wash/id6746198051",
+    "description": "Neo Wash a comprehensive car service management app. Where users can book car services, track service history, and manage appointments. Traditional car washes rely on water tanks, pressure washers, generators, and pumps — tools that are not only inefficient and expensive but can also cause damage to your vehicle, harm the environment, and pose risks to human health.",
+    "role": "Backend Developer & Frontend Developer(Only Admin Panel)",
+    "responsibilities": [
+      "Developed the backend architecture using Node.js, Express, and TypeScript",
+      "Integrated MongoDB with Prisma ORM for efficient database operations",
+      "Implemented authentication and authorization using JWT",
+      "Integrated Stripe for secure online payments",
+      "Built the admin dashboard for managing services, bundles, addons, and bookings",
+      "Implemented slot-based booking and real-time service status updates"
+    ],
+    "features": [
+      "Admin panel for service, bundle & addon management",
+      "Slot-based booking with real-time schedule management",
+      "Push notifications for reminders & engagement",
+      "Push notifications for reminders & engagement",
+      "Live booking status updates and service tracking",
+      "Complete vehicle service history & maintenance tracking",
+      "Secure payment integration with multiple options"
+    ],
+    "technologies": [
+      "Node.js (Backend)",
+      "TypeScript (Backend)",
+      "Express (Backend)",
+      "MongoDB (Database)",
+      "Prisma (ORM)",
+      "JWT (Authentication)",
+      "Stripe (Payment Gateway)"
+    ]
+  },
+  {
+    "title": "Town'ZZ",
+    "date": "January 2025",
+    "website-link": "",
+    "playStore-link": "https://play.google.com/store/apps/details?id=com.townzz.user&hl=en",
+    "appStore-link": "",
+    "description": "Town'ZZ is a dynamic event discovery and management app that connects users with local cultural, musical, artistic, and sporting events. It allows residents to find activities nearby and event creators to easily promote their events. The platform offers seamless event creation, ticketing, and secure payment processing for a smooth experience.",
+    "role": "Backend Developer & Dashboard Developer",
+    "responsibilities": [
+      "Developed the backend system using Node.js, Express, and TypeScript",
+      "Implemented secure authentication and authorization with JWT",
+      "Designed and integrated APIs for event creation, booking, and ticket management",
+      "Integrated Stripe for payment and ticket handling",
+      "Developed the admin dashboard to manage users, events, and payments",
+      "Used Prisma ORM with MongoDB for efficient data modeling and management",
+      "Ensured API scalability and performance optimization"
+    ],
+    "features": [
+      "Quick search for events around you using geolocation",
+      "Intuitive and modern interface for an optimal user experience",
+      "Simplified ticket and payment management through Stripe integration",
+      "Easily publish your events with descriptions and photos",
+      "Gain visibility with a local and active audience"
+    ],
+    "technologies": [
+      "Node.js (Backend)",
+      "TypeScript (Backend)",
+      "Express (Backend)",
+      "MongoDB (Database)",
+      "Prisma (ORM)",
+      "JWT (Authentication)",
+      "Stripe (Payment Gateway)"
+    ]
+  },
+  {
+    "title": "My Guo",
+    "date": "January 2025",
+    "website-link": "https://my-guo.vercel.app",
+    "playStore-link": "",
+    "appStore-link": "",
+    "description": "MyGUO is an innovative AI-powered Web3 platform that provides real-time insights, wallet analysis, and predictive market trends. It features tools like Wallet Intelligence, Historical Analysis, and Market Insights to help users make data-driven investment decisions. Through the 'Ask Guo Anything' feature, users can interact with an intelligent AI agent for personalized insights, creating an engaging and futuristic user experience.",
+    "role": "Frontend Developer",
+    "responsibilities": [
+      "Developed a modern and responsive frontend using Next.js",
+      "Designed an interactive user interface for AI-powered insights and analytics",
+      "Implemented smooth page transitions and animations for better UX",
+      "Integrated dynamic data visualization components for wallet and market analysis",
+      "Optimized frontend performance for faster rendering and improved user experience"
+    ],
+    "features": [
+      "Interactive and responsive frontend built with Next.js",
+      "Engaging UI for real-time AI interactions",
+      "Dynamic data visualization for wallet behavior and market insights",
+      "Seamless user experience with modern design principles"
     ],
     "technologies": [
       "Next.js",
@@ -41,11 +235,36 @@
     ]
   },
   {
+    "title": "Nutrigenix",
+    "date": "Dec 2024",
+    "website-link": "https://nutrigenix.ai",
+    "playStore-link": "",
+    "appStore-link": "",
+    "description": "Nutrigenix is a frontend-only project designed as an interactive, terminal-style web experience. It mimics a command-line interface with smooth typing animations and dynamic transitions, providing users with an engaging and visually appealing experience. The project is built entirely with Next.js and enhanced with animation libraries.",
+    "role": "Frontend Developer",
+    "responsibilities": [
+      "Developed a responsive and interactive frontend using Next.js",
+      "Implemented typing animations to simulate a terminal environment",
+      "Integrated Framer Motion for smooth UI transitions and animations",
+      "Used AOS (Animate On Scroll) to enhance scroll-based interactions",
+      "Optimized frontend performance for better loading and animation smoothness"
+    ],
+    "features": [
+      "Frontend designed with interactive UI using Next.js and Framer Motion",
+      "AOS (Animate On Scroll) enhances scrolling experience with delightful animations"
+    ],
+    "technologies": [
+      "Next.js",
+      "Framer Motion",
+      "AOS (Animate On Scroll)"
+    ]
+  },
+  {
     "title": "Talk of Time",
     "date": "Apr 2024",
-    "website-link" : "https://watch-shop-99d43.web.app",
-    "playStore-link" : "",
-    "appStore-link" : "",
+    "website-link": "https://watch-shop-99d43.web.app",
+    "playStore-link": "",
+    "appStore-link": "",
     "description": "A new website powered by React and Node.js, featuring captivating animations with Framer Motion and AOS. It ensures a seamless user experience with smooth navigation and dynamic content updates.",
     "features": [
       "Backend built with Node.js and Express for robust handling and MySQL for database",
@@ -65,9 +284,9 @@
   {
     "title": "ZingSeat World",
     "date": "Feb 2024",
-    "website-link" : "https://zingseat-app.vercel.app",
-    "playStore-link" : "",
-    "appStore-link" : "",
+    "website-link": "https://zingseat-app.vercel.app",
+    "playStore-link": "",
+    "appStore-link": "",
     "description": "An e-commerce platform where users can browse products or register as sellers. Built to deliver smooth product management and secure checkout.",
     "features": [
       "User and seller panels with login/signup system",
@@ -89,9 +308,9 @@
   {
     "title": "Coffee House",
     "date": "Feb 2024",
-    "website-link" : "https://coffee-house-db-nu.vercel.app",
-    "playStore-link" : "",
-    "appStore-link" : "",
+    "website-link": "https://coffee-house-db-nu.vercel.app",
+    "playStore-link": "",
+    "appStore-link": "",
     "description": "A basic web project created after learning MySQL integration with Node.js and Express. Showcases CRUD functionality with a simple interface.",
     "features": [
       "View coffee items and details",
@@ -109,9 +328,9 @@
   {
     "title": "NovoNest Residences",
     "date": "Dec 2023",
-    "website-link" : "https://novonest.vercel.app",
-    "playStore-link" : "",
-    "appStore-link" : "",
+    "website-link": "https://novonest.vercel.app",
+    "playStore-link": "",
+    "appStore-link": "",
     "description": "An apartment owner’s website for managing flat rents and maintenance. Includes multi-user authentication and an admin dashboard.",
     "features": [
       "Apartment listings with rent information",
@@ -133,9 +352,9 @@
   {
     "title": "Speed Of Creativity",
     "date": "Dec 2023",
-    "website-link" : "https://speed-of-creativity.vercel.app",
-    "playStore-link" : "",
-    "appStore-link" : "",
+    "website-link": "https://speed-of-creativity.vercel.app",
+    "playStore-link": "",
+    "appStore-link": "",
     "description": "An online platform for learning coding where users can create and complete coding assignments and challenges.",
     "technologies": [
       "React",
@@ -149,9 +368,9 @@
   {
     "title": "PakeHeart Yoga",
     "date": "Oct 2023",
-    "website-link" : "https://pakeheart-yoga.vercel.app",
-    "playStore-link" : "",
-    "appStore-link" : "",
+    "website-link": "https://pakeheart-yoga.vercel.app",
+    "playStore-link": "",
+    "appStore-link": "",
     "description": "An online educational website where admins can add class-recorded videos and users can bookmark their favorites.",
     "technologies": [
       "React",
