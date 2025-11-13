@@ -122,7 +122,10 @@
     "playStore-link": "",
     "appStore-link": "",
     "images": [
-     
+     "https://res.cloudinary.com/daudgshta/image/upload/v1763043612/Project%20images/pourmoi/57411405-ffeae5a5f549ca0ec921ace3327bba9a_juerzp.png",
+     "https://res.cloudinary.com/daudgshta/image/upload/v1763043610/Project%20images/pourmoi/57411454-dce439dc41c721eb4e0c4a604ad5901f_jcy5n3.png",
+     "https://res.cloudinary.com/daudgshta/image/upload/v1763043610/Project%20images/pourmoi/57411470-5853e4faf9aa1384192d31289d42538e_dyquzo.png",
+     "https://res.cloudinary.com/daudgshta/image/upload/v1763043609/Project%20images/pourmoi/57411487-a7f5e7b89ac61cd988a1811926694ed9_ony0lj.png"
     ],
     "description": "Pourmoi is an online food ordering platform that allows users to place meal orders or create offers for restaurants. After placing an order, users receive a digital token for easy pickup. The platform simplifies restaurant operations by enabling administrators to manage categories, menu items, and orders efficiently, with secure payment integration for a smooth user experience.",
     "role": "Backend Developer",
@@ -159,7 +162,11 @@
     "playStore-link": "",
     "appStore-link": "https://apps.apple.com/us/app/abroad-app/id6752798049",
     "images": [
-     
+     "https://res.cloudinary.com/daudgshta/image/upload/v1763043980/Project%20images/abroad/460x996bb_t9jlsu.webp",
+     "https://res.cloudinary.com/daudgshta/image/upload/v1763043977/Project%20images/abroad/1460x996bb_kjk6dz.webp",
+     "https://res.cloudinary.com/daudgshta/image/upload/v1763043978/Project%20images/abroad/460x9961bb_r8ew6k.webp",
+     "https://res.cloudinary.com/daudgshta/image/upload/v1763043979/Project%20images/abroad/460x996b2b_rjefzf.webp",
+     "https://res.cloudinary.com/daudgshta/image/upload/v1763043978/Project%20images/abroad/4601x996bb_sftezu.webp"
     ],
     "description": "Abroad is a travel companion app designed to help users record, organize, and relive their journeys. From tracking visited countries to managing trips, journals, and personal travel data, Abroad provides a seamless experience for travelers who want to keep their adventures organized and memorable.",
     "role": "Backend Developer",
