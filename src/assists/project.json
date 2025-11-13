@@ -1,26 +1,27 @@
 [
   {
-    "title": "Pourmoi",
-    "date": "September 2025",
-    "website-link": "https://www.pourmoi.ca",
+    "title": "Levaro",
+    "date": "November 2025",
+    "website-link": "",
     "playStore-link": "",
-    "appStore-link": "",
-    "description": "Pourmoi is an online food ordering platform that allows users to place meal orders or create offers for restaurants. After placing an order, users receive a digital token for easy pickup. The platform simplifies restaurant operations by enabling administrators to manage categories, menu items, and orders efficiently, with secure payment integration for a smooth user experience.",
+    "appStore-link": "https://apps.apple.com/ae/app/levaro/id6754184610",
+    "description": "Levaro is a smart service platform designed to connect users with professional service providers instantly and efficiently. Whether you need home cleaning, plumbing, electrical repair, store cleaning, or healthcare services, Levaro helps you find the right expert for your task in just a few taps.",
     "role": "Backend Developer",
     "responsibilities": [
       "Developed and maintained backend APIs using Node.js, Express, and TypeScript",
       "Designed and managed database schemas using Prisma ORM with MongoDB",
       "Implemented JWT-based authentication and authorization for users and admins",
-      "Integrated Stripe for secure online payments and order processing",
-      "Built endpoints for food ordering, token generation, and restaurant management",
+      "Built endpoints for service create, service booking, token generation, and dashboard management like users profiles and their service history, booking and ratings",
+      "User friendly error handling and input validation to ensure data integrity",
       "Worked closely with the frontend team to ensure seamless API integration and performance",
       "Optimized server logic and data handling to improve response time and scalability"
     ],
     "features": [
-      "Simple and efficient food ordering and token-based pickup system",
-      "Automatic token generation after successful order placement",
-      "Admin panel for category, menu, and order management",
-      "Secure payment integration using Stripe",
+      "Simple authentication for users and service providers.",
+      "Easy to handle service creation and booking system.",
+      "Automatic token generation after successful booking placement",
+      "Admin panel for overview reports and management of users, services, complains and bookings",
+      "Real-time chatting between users and service providers also notifications for booking status updates",
       "Responsive and user-friendly restaurant management workflow"
     ],
     "technologies": [
@@ -29,8 +30,38 @@
       "Express (Backend)",
       "MongoDB (Database)",
       "Prisma (ORM)",
-      "JWT (Authentication)",
-      "Stripe (Payment Gateway)"
+      "JWT (Authentication)"
+    ]
+  },
+  {
+    "title": "TeachON 345",
+    "date": "November 2025",
+    "website-link": "https://techon345.com",
+    "playStore-link": "",
+    "appStore-link": "",
+    "description": "TechON 345, offers a seamless online shopping experience for premium electronics in the Cayman Islands. With a focus on speed, local delivery, and an easy-to-navigate interface, it provides customers with the latest in technology, from phones to gadgets, all backed by a commitment to fast, reliable delivery.",
+    "role": "Backend Developer",
+    "responsibilities": [
+      "Developed and maintained backend APIs using Node.js, Express, and TypeScript",
+      "Designed and managed database schemas using Prisma ORM with MongoDB",
+      "Implemented JWT-based authentication and authorization for users and admins",
+      "Built endpoints for product create, projects ordering, token generation, and product management",
+      "Worked closely with the frontend team to ensure seamless API integration and performance",
+      "Optimized server logic and data handling to improve response time and scalability"
+    ],
+    "features": [
+      "Simple authentication for users.",
+      "Automatic token generation after successful order placement",
+      "Admin panel for category, products, and order management",
+      "Responsive and user-friendly restaurant management workflow"
+    ],
+    "technologies": [
+      "Node.js (Backend)",
+      "TypeScript (Backend)",
+      "Express (Backend)",
+      "MongoDB (Database)",
+      "Prisma (ORM)",
+      "JWT (Authentication)"
     ]
   },
   {
@@ -60,6 +91,40 @@
     ],
     "technologies": [
       "Next.js (Frontend)",
+      "Node.js (Backend)",
+      "TypeScript (Backend)",
+      "Express (Backend)",
+      "MongoDB (Database)",
+      "Prisma (ORM)",
+      "JWT (Authentication)",
+      "Stripe (Payment Gateway)"
+    ]
+  },
+  {
+    "title": "Pourmoi",
+    "date": "September 2025",
+    "website-link": "https://www.pourmoi.ca",
+    "playStore-link": "",
+    "appStore-link": "",
+    "description": "Pourmoi is an online food ordering platform that allows users to place meal orders or create offers for restaurants. After placing an order, users receive a digital token for easy pickup. The platform simplifies restaurant operations by enabling administrators to manage categories, menu items, and orders efficiently, with secure payment integration for a smooth user experience.",
+    "role": "Backend Developer",
+    "responsibilities": [
+      "Developed and maintained backend APIs using Node.js, Express, and TypeScript",
+      "Designed and managed database schemas using Prisma ORM with MongoDB",
+      "Implemented JWT-based authentication and authorization for users and admins",
+      "Integrated Stripe for secure online payments and order processing",
+      "Built endpoints for food ordering, token generation, and restaurant management",
+      "Worked closely with the frontend team to ensure seamless API integration and performance",
+      "Optimized server logic and data handling to improve response time and scalability"
+    ],
+    "features": [
+      "Simple and efficient food ordering and token-based pickup system",
+      "Automatic token generation after successful order placement",
+      "Admin panel for category, menu, and order management",
+      "Secure payment integration using Stripe",
+      "Responsive and user-friendly restaurant management workflow"
+    ],
+    "technologies": [
       "Node.js (Backend)",
       "TypeScript (Backend)",
       "Express (Backend)",
