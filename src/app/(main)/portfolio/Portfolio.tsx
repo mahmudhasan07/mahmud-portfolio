@@ -8,17 +8,25 @@ import projects from "@/assists/project.json"
 import Link from 'next/link';
 
 const Portfolio = () => {
-    return (
-        <section>
-            <h1 className='text-5xl font-bold my-6 text-center'>My Latest Projects</h1>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10'>
+    const handleNavigation = (title: string) => {
+        const formattedTitle = title.toLowerCase().replace(/\s+/g, '-');
+        window.location.href = `/portfolio/${formattedTitle}`;
+    }
+
+    return (
+        <section className='relative'>
+            <h1 className='text-5xl font-bold my-6 text-center text-black'>My Latest Projects</h1>
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 '>
                 {
 
                     projects.map((item, idx) =>
 
-                        <div key={idx} className='borderNew2 p-3 space-y-2'>
-                            <img src="" alt="" />
+                        <div key={idx} className='borderNew2 p-3 space-y-2 relative'>
+                            {
+                                item?.images && <img id="projectimage" src={item?.images[0] || ""} alt={item.title} className='rounded-lg w-full h-72 object-cover object-top' />
+                            }
                             <div className="flex gap-3 justify-start p-2 rounded-md">
                                 {item?.['appStore-link'] && (
                                     <Link
@@ -58,7 +66,7 @@ const Portfolio = () => {
                             </div>
                             <h2 className='text-2xl font-semibold'>{item.title}</h2>
                             <p className=''>{item.description.substring(0, 90)}...</p>
-                            <button className='bgcolor py-2 px-4 font-semibold  w-full rounded-lg'>More Details</button>
+                            <button onClick={()=> handleNavigation(item?.title)} className='bgcolor py-2 px-4 font-semibold  w-full rounded-lg'>More Details</button>
                         </div>
 
                     )

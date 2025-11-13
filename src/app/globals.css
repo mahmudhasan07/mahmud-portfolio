@@ -86,3 +86,29 @@ textarea {
   rgba(102, 102, 102, 0.2) /* end color: gray with 20% opacity */
 );
 }
+
+
+#projectimage:hover{
+    object-fit: cover;
+    object-position: top;
+    animation: imagescroll 6s infinite ease;
+}
+
+@keyframes imagescroll {
+    0%{
+        object-fit: cover;
+        object-position: top; 
+    }
+    10%{
+        object-fit: cover;
+        object-position: top; 
+    }
+    90%{
+        object-fit: cover;
+        object-position: bottom; 
+    }
+    100%{
+        object-fit: cover;
+        object-position: bottom; 
+    }
+}

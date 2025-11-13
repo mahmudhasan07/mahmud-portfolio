@@ -5,6 +5,9 @@
     "website-link": "",
     "playStore-link": "",
     "appStore-link": "https://apps.apple.com/ae/app/levaro/id6754184610",
+    "images": [
+     
+    ],
     "description": "Levaro is a smart service platform designed to connect users with professional service providers instantly and efficiently. Whether you need home cleaning, plumbing, electrical repair, store cleaning, or healthcare services, Levaro helps you find the right expert for your task in just a few taps.",
     "role": "Backend Developer",
     "responsibilities": [
@@ -39,6 +42,12 @@
     "website-link": "https://techon345.com",
     "playStore-link": "",
     "appStore-link": "",
+    "images": [
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763039659/Project%20images/techOn345/TechON_345_swl00c.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763039659/Project%20images/techOn345/57410331-8aa973ad362c2288f839f5b86b055c17_prmued.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763039659/Project%20images/techOn345/57410314-a7e28374986f282866946d420f78cc55_denfxd.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763039659/Project%20images/techOn345/TechON_345_1_lxumhq.png"
+    ],
     "description": "TechON 345, offers a seamless online shopping experience for premium electronics in the Cayman Islands. With a focus on speed, local delivery, and an easy-to-navigate interface, it provides customers with the latest in technology, from phones to gadgets, all backed by a commitment to fast, reliable delivery.",
     "role": "Backend Developer",
     "responsibilities": [
@@ -70,6 +79,12 @@
     "website-link": "https://myprofitdoctor.com",
     "playStore-link": "",
     "appStore-link": "",
+    "images": [
+     "https://res.cloudinary.com/daudgshta/image/upload/v1763040649/Project%20images/perfect%20doctor/57410641-26c70cc5e36d1ba01b6af334467b2ad2_qvjsp0.png",
+     "https://res.cloudinary.com/daudgshta/image/upload/v1763040906/Project%20images/perfect%20doctor/57410729-d0a2b2b4ba2ef30bb40873b710643417_e3nybs.png",
+     "https://res.cloudinary.com/daudgshta/image/upload/v1763040637/Project%20images/perfect%20doctor/57410668-1ed90c877d34e5e72435335c14c173b2_jchho7.png",
+     "https://res.cloudinary.com/daudgshta/image/upload/v1763040636/Project%20images/perfect%20doctor/57410662-3817cb41ad106bfe06143f6060903ebc_airgce.png"
+    ],
     "description": "Profit Doctor is a professional consulting platform in the field of aesthetic medicine. Its mission is to empower aesthetic clinics and private equity partners with expert consulting, operational optimization, and strategic growth guidance. The platform simplifies client engagement with features like online appointment booking, admin management, and detailed treatment information.",
     "role": "Full Stack Developer (Frontend & Backend)",
     "responsibilities": [
@@ -106,6 +121,9 @@
     "website-link": "https://www.pourmoi.ca",
     "playStore-link": "",
     "appStore-link": "",
+    "images": [
+     
+    ],
     "description": "Pourmoi is an online food ordering platform that allows users to place meal orders or create offers for restaurants. After placing an order, users receive a digital token for easy pickup. The platform simplifies restaurant operations by enabling administrators to manage categories, menu items, and orders efficiently, with secure payment integration for a smooth user experience.",
     "role": "Backend Developer",
     "responsibilities": [
@@ -140,6 +158,9 @@
     "website-link": "",
     "playStore-link": "",
     "appStore-link": "https://apps.apple.com/us/app/abroad-app/id6752798049",
+    "images": [
+     
+    ],
     "description": "Abroad is a travel companion app designed to help users record, organize, and relive their journeys. From tracking visited countries to managing trips, journals, and personal travel data, Abroad provides a seamless experience for travelers who want to keep their adventures organized and memorable.",
     "role": "Backend Developer",
     "responsibilities": [
@@ -175,6 +196,9 @@
     "website-link": "",
     "playStore-link": "https://play.google.com/store/apps/details?id=com.building_management.user",
     "appStore-link": "https://apps.apple.com/us/app/probanesa-building-manager/id6748986825",
+    "images": [
+     
+    ],
     "description": "ProBanesa is a comprehensive building management platform designed for administrators, residents, and businesses to simplify operations, communication, and compliance in residential complexes. It streamlines everything from managing payments and sending notifications to maintaining centralized building data — all within one secure platform.",
     "role": "Backend Developer",
     "responsibilities": [
@@ -210,6 +234,9 @@
     "website-link": "",
     "playStore-link": "https://play.google.com/store/apps/details?id=com.neowash.user.neowash&pcampaignid=web_share",
     "appStore-link": "https://apps.apple.com/ae/app/neo-wash/id6746198051",
+    "images": [
+     
+    ],
     "description": "Neo Wash a comprehensive car service management app. Where users can book car services, track service history, and manage appointments. Traditional car washes rely on water tanks, pressure washers, generators, and pumps — tools that are not only inefficient and expensive but can also cause damage to your vehicle, harm the environment, and pose risks to human health.",
     "role": "Backend Developer & Frontend Developer(Only Admin Panel)",
     "responsibilities": [
@@ -245,6 +272,9 @@
     "website-link": "",
     "playStore-link": "https://play.google.com/store/apps/details?id=com.townzz.user&hl=en",
     "appStore-link": "",
+    "images": [
+     
+    ],
     "description": "Town'ZZ is a dynamic event discovery and management app that connects users with local cultural, musical, artistic, and sporting events. It allows residents to find activities nearby and event creators to easily promote their events. The platform offers seamless event creation, ticketing, and secure payment processing for a smooth experience.",
     "role": "Backend Developer & Dashboard Developer",
     "responsibilities": [
@@ -279,6 +309,9 @@
     "website-link": "https://my-guo.vercel.app",
     "playStore-link": "",
     "appStore-link": "",
+    "images": [
+     
+    ],
     "description": "MyGUO is an innovative AI-powered Web3 platform that provides real-time insights, wallet analysis, and predictive market trends. It features tools like Wallet Intelligence, Historical Analysis, and Market Insights to help users make data-driven investment decisions. Through the 'Ask Guo Anything' feature, users can interact with an intelligent AI agent for personalized insights, creating an engaging and futuristic user experience.",
     "role": "Frontend Developer",
     "responsibilities": [
@@ -305,6 +338,9 @@
     "website-link": "https://nutrigenix.ai",
     "playStore-link": "",
     "appStore-link": "",
+    "images": [
+     
+    ],
     "description": "Nutrigenix is a frontend-only project designed as an interactive, terminal-style web experience. It mimics a command-line interface with smooth typing animations and dynamic transitions, providing users with an engaging and visually appealing experience. The project is built entirely with Next.js and enhanced with animation libraries.",
     "role": "Frontend Developer",
     "responsibilities": [
@@ -330,6 +366,9 @@
     "website-link": "https://watch-shop-99d43.web.app",
     "playStore-link": "",
     "appStore-link": "",
+    "images": [
+     
+    ],
     "description": "A new website powered by React and Node.js, featuring captivating animations with Framer Motion and AOS. It ensures a seamless user experience with smooth navigation and dynamic content updates.",
     "features": [
       "Backend built with Node.js and Express for robust handling and MySQL for database",
@@ -352,6 +391,9 @@
     "website-link": "https://zingseat-app.vercel.app",
     "playStore-link": "",
     "appStore-link": "",
+    "images": [
+     
+    ],
     "description": "An e-commerce platform where users can browse products or register as sellers. Built to deliver smooth product management and secure checkout.",
     "features": [
       "User and seller panels with login/signup system",
@@ -376,6 +418,9 @@
     "website-link": "https://coffee-house-db-nu.vercel.app",
     "playStore-link": "",
     "appStore-link": "",
+    "images": [
+     
+    ],
     "description": "A basic web project created after learning MySQL integration with Node.js and Express. Showcases CRUD functionality with a simple interface.",
     "features": [
       "View coffee items and details",
@@ -396,6 +441,9 @@
     "website-link": "https://novonest.vercel.app",
     "playStore-link": "",
     "appStore-link": "",
+    "images": [
+     
+    ],
     "description": "An apartment owner’s website for managing flat rents and maintenance. Includes multi-user authentication and an admin dashboard.",
     "features": [
       "Apartment listings with rent information",
@@ -420,6 +468,9 @@
     "website-link": "https://speed-of-creativity.vercel.app",
     "playStore-link": "",
     "appStore-link": "",
+    "images": [
+     
+    ],
     "description": "An online platform for learning coding where users can create and complete coding assignments and challenges.",
     "technologies": [
       "React",
@@ -436,6 +487,9 @@
     "website-link": "https://pakeheart-yoga.vercel.app",
     "playStore-link": "",
     "appStore-link": "",
+    "images": [
+     
+    ],
     "description": "An online educational website where admins can add class-recorded videos and users can bookmark their favorites.",
     "technologies": [
       "React",
