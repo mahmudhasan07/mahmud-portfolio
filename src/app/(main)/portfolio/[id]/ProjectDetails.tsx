@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import Image from 'next/image';
 import React, { useState } from 'react';
 import projects from "@/assists/project.json";
@@ -8,7 +8,7 @@ import { CgWebsite } from "react-icons/cg";
 import Link from 'next/link';
 
 const ProjectDetails = () => {
-    const title = useParams().id;
+   const { id : title } = useParams();
     const data = projects.find(proj => proj.title.toLowerCase().replace(/\s+/g, '-') === title);
 
     const [activeImage, setActiveImage] = useState(0);
@@ -36,14 +36,14 @@ const ProjectDetails = () => {
     };
 
     // Drag start
-    const handleMouseDown = (e) => {
+    const handleMouseDown = (e : any) => {
         if (!zoomed) return;
         setDragging(true);
         setStart({ x: e.clientX - position.x, y: e.clientY - position.y });
     };
 
     // Drag move
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e : any) => {
         if (!dragging) return;
         const newX = e.clientX - start.x;
         const newY = e.clientY - start.y;

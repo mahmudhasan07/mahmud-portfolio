@@ -15,7 +15,7 @@ const Navbar = () => {
     ]
 
     return (
-        <div className='relative text-white borderNew backdrop-blur-sm bg-black/30 px-12 py-4 rounded-lg w-fit mx-auto'>
+        <div className=' text-white borderNew backdrop-blur-sm bg-black/30 px-12 py-4 rounded-lg w-fit mx-auto'>
             <div className='space-x-3'>
                 {
                     routes.map((item) => 

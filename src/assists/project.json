@@ -6,7 +6,11 @@
     "playStore-link": "",
     "appStore-link": "https://apps.apple.com/ae/app/levaro/id6754184610",
     "images": [
-     
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763087435/Project%20images/Levaro/On_boarding_1_kyfknk.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763087434/Project%20images/Levaro/On_boarding_k2bxuc.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763087435/Project%20images/Levaro/Home_1_dm3hq0.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763087435/Project%20images/Levaro/Home_2_gxii0p.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763087435/Project%20images/Levaro/Service_Detail_awmkox.png"
     ],
     "description": "Levaro is a smart service platform designed to connect users with professional service providers instantly and efficiently. Whether you need home cleaning, plumbing, electrical repair, store cleaning, or healthcare services, Levaro helps you find the right expert for your task in just a few taps.",
     "role": "Backend Developer",
@@ -80,10 +84,10 @@
     "playStore-link": "",
     "appStore-link": "",
     "images": [
-     "https://res.cloudinary.com/daudgshta/image/upload/v1763040649/Project%20images/perfect%20doctor/57410641-26c70cc5e36d1ba01b6af334467b2ad2_qvjsp0.png",
-     "https://res.cloudinary.com/daudgshta/image/upload/v1763040906/Project%20images/perfect%20doctor/57410729-d0a2b2b4ba2ef30bb40873b710643417_e3nybs.png",
-     "https://res.cloudinary.com/daudgshta/image/upload/v1763040637/Project%20images/perfect%20doctor/57410668-1ed90c877d34e5e72435335c14c173b2_jchho7.png",
-     "https://res.cloudinary.com/daudgshta/image/upload/v1763040636/Project%20images/perfect%20doctor/57410662-3817cb41ad106bfe06143f6060903ebc_airgce.png"
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763040649/Project%20images/perfect%20doctor/57410641-26c70cc5e36d1ba01b6af334467b2ad2_qvjsp0.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763040906/Project%20images/perfect%20doctor/57410729-d0a2b2b4ba2ef30bb40873b710643417_e3nybs.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763040637/Project%20images/perfect%20doctor/57410668-1ed90c877d34e5e72435335c14c173b2_jchho7.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763040636/Project%20images/perfect%20doctor/57410662-3817cb41ad106bfe06143f6060903ebc_airgce.png"
     ],
     "description": "Profit Doctor is a professional consulting platform in the field of aesthetic medicine. Its mission is to empower aesthetic clinics and private equity partners with expert consulting, operational optimization, and strategic growth guidance. The platform simplifies client engagement with features like online appointment booking, admin management, and detailed treatment information.",
     "role": "Full Stack Developer (Frontend & Backend)",
@@ -122,10 +126,10 @@
     "playStore-link": "",
     "appStore-link": "",
     "images": [
-     "https://res.cloudinary.com/daudgshta/image/upload/v1763043612/Project%20images/pourmoi/57411405-ffeae5a5f549ca0ec921ace3327bba9a_juerzp.png",
-     "https://res.cloudinary.com/daudgshta/image/upload/v1763043610/Project%20images/pourmoi/57411454-dce439dc41c721eb4e0c4a604ad5901f_jcy5n3.png",
-     "https://res.cloudinary.com/daudgshta/image/upload/v1763043610/Project%20images/pourmoi/57411470-5853e4faf9aa1384192d31289d42538e_dyquzo.png",
-     "https://res.cloudinary.com/daudgshta/image/upload/v1763043609/Project%20images/pourmoi/57411487-a7f5e7b89ac61cd988a1811926694ed9_ony0lj.png"
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763043612/Project%20images/pourmoi/57411405-ffeae5a5f549ca0ec921ace3327bba9a_juerzp.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763043610/Project%20images/pourmoi/57411454-dce439dc41c721eb4e0c4a604ad5901f_jcy5n3.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763043610/Project%20images/pourmoi/57411470-5853e4faf9aa1384192d31289d42538e_dyquzo.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763043609/Project%20images/pourmoi/57411487-a7f5e7b89ac61cd988a1811926694ed9_ony0lj.png"
     ],
     "description": "Pourmoi is an online food ordering platform that allows users to place meal orders or create offers for restaurants. After placing an order, users receive a digital token for easy pickup. The platform simplifies restaurant operations by enabling administrators to manage categories, menu items, and orders efficiently, with secure payment integration for a smooth user experience.",
     "role": "Backend Developer",
@@ -162,11 +166,11 @@
     "playStore-link": "",
     "appStore-link": "https://apps.apple.com/us/app/abroad-app/id6752798049",
     "images": [
-     "https://res.cloudinary.com/daudgshta/image/upload/v1763043980/Project%20images/abroad/460x996bb_t9jlsu.webp",
-     "https://res.cloudinary.com/daudgshta/image/upload/v1763043977/Project%20images/abroad/1460x996bb_kjk6dz.webp",
-     "https://res.cloudinary.com/daudgshta/image/upload/v1763043978/Project%20images/abroad/460x9961bb_r8ew6k.webp",
-     "https://res.cloudinary.com/daudgshta/image/upload/v1763043979/Project%20images/abroad/460x996b2b_rjefzf.webp",
-     "https://res.cloudinary.com/daudgshta/image/upload/v1763043978/Project%20images/abroad/4601x996bb_sftezu.webp"
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763043980/Project%20images/abroad/460x996bb_t9jlsu.webp",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763043977/Project%20images/abroad/1460x996bb_kjk6dz.webp",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763043978/Project%20images/abroad/460x9961bb_r8ew6k.webp",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763043979/Project%20images/abroad/460x996b2b_rjefzf.webp",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763043978/Project%20images/abroad/4601x996bb_sftezu.webp"
     ],
     "description": "Abroad is a travel companion app designed to help users record, organize, and relive their journeys. From tracking visited countries to managing trips, journals, and personal travel data, Abroad provides a seamless experience for travelers who want to keep their adventures organized and memorable.",
     "role": "Backend Developer",
@@ -204,7 +208,11 @@
     "playStore-link": "https://play.google.com/store/apps/details?id=com.building_management.user",
     "appStore-link": "https://apps.apple.com/us/app/probanesa-building-manager/id6748986825",
     "images": [
-     
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763097531/Project%20images/probanesa/Onboarding_m1ogbs.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763097532/Project%20images/probanesa/Sign_up_d7lgnt.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763097532/Project%20images/probanesa/Home_Page_mxdul7.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763097532/Project%20images/probanesa/Home_Page_1_axubyp.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763097532/Project%20images/probanesa/Propertie_User_mns8qd.png"
     ],
     "description": "ProBanesa is a comprehensive building management platform designed for administrators, residents, and businesses to simplify operations, communication, and compliance in residential complexes. It streamlines everything from managing payments and sending notifications to maintaining centralized building data — all within one secure platform.",
     "role": "Backend Developer",
@@ -242,7 +250,12 @@
     "playStore-link": "https://play.google.com/store/apps/details?id=com.neowash.user.neowash&pcampaignid=web_share",
     "appStore-link": "https://apps.apple.com/ae/app/neo-wash/id6746198051",
     "images": [
-     
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763097740/Project%20images/Neo%20wash/16174d96-53d5-4756-9e99-3a2df786dcc9.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1761892175/Project%20images/Neo%20wash/unnamed_2_hn2a8m.webp",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1761892175/Project%20images/Neo%20wash/unnamed_1_yz0zbo.webp",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1761892175/Project%20images/Neo%20wash/unnamed_4_nj3yrm.webp",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1761892175/Project%20images/Neo%20wash/unnamed_gcmfc0.webp",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1761892175/Project%20images/Neo%20wash/unnamed_3_fhaccj.webp"
     ],
     "description": "Neo Wash a comprehensive car service management app. Where users can book car services, track service history, and manage appointments. Traditional car washes rely on water tanks, pressure washers, generators, and pumps — tools that are not only inefficient and expensive but can also cause damage to your vehicle, harm the environment, and pose risks to human health.",
     "role": "Backend Developer & Frontend Developer(Only Admin Panel)",
@@ -280,7 +293,9 @@
     "playStore-link": "https://play.google.com/store/apps/details?id=com.townzz.user&hl=en",
     "appStore-link": "",
     "images": [
-     
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763097995/Project%20images/townzz/023e56f7-c7df-4326-91c7-f2cfb84bfda6.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763098040/Project%20images/townzz/912635c6-3d70-4f52-84bf-c248e78c71a2.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763098023/Project%20images/townzz/5aaf3ac1-0ab4-4331-8814-d48caac68891.png"
     ],
     "description": "Town'ZZ is a dynamic event discovery and management app that connects users with local cultural, musical, artistic, and sporting events. It allows residents to find activities nearby and event creators to easily promote their events. The platform offers seamless event creation, ticketing, and secure payment processing for a smooth experience.",
     "role": "Backend Developer & Dashboard Developer",
@@ -317,7 +332,9 @@
     "playStore-link": "",
     "appStore-link": "",
     "images": [
-     
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763098142/Project%20images/myGuo/c97788fb-95c6-4a23-aa04-f246dc4329bb.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763098183/Project%20images/myGuo/8aa943d0-31a9-4a52-8d42-3a2c11073852.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763098226/Project%20images/myGuo/bed35efc-56f5-4e41-b1bd-75dffd0fb0c0.png"
     ],
     "description": "MyGUO is an innovative AI-powered Web3 platform that provides real-time insights, wallet analysis, and predictive market trends. It features tools like Wallet Intelligence, Historical Analysis, and Market Insights to help users make data-driven investment decisions. Through the 'Ask Guo Anything' feature, users can interact with an intelligent AI agent for personalized insights, creating an engaging and futuristic user experience.",
     "role": "Frontend Developer",
@@ -346,7 +363,8 @@
     "playStore-link": "",
     "appStore-link": "",
     "images": [
-     
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763098384/Project%20images/nutrigenix/73baf16c-d2c4-4581-aeb2-02db4ec3b4fd.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763098331/Project%20images/nutrigenix/3696c4e6-df7e-4d6b-a732-5cda45eef569.png"
     ],
     "description": "Nutrigenix is a frontend-only project designed as an interactive, terminal-style web experience. It mimics a command-line interface with smooth typing animations and dynamic transitions, providing users with an engaging and visually appealing experience. The project is built entirely with Next.js and enhanced with animation libraries.",
     "role": "Frontend Developer",
@@ -374,7 +392,11 @@
     "playStore-link": "",
     "appStore-link": "",
     "images": [
-     
+      "https://i.imgur.com/cREX0PX.png",
+      "https://i.imgur.com/fhGClxO.png",
+      "https://i.imgur.com/valkrGy.png",
+      "https://i.imgur.com/8p0l9MG.png",
+      "https://i.imgur.com/sDb61M8.mp4"
     ],
     "description": "A new website powered by React and Node.js, featuring captivating animations with Framer Motion and AOS. It ensures a seamless user experience with smooth navigation and dynamic content updates.",
     "features": [
@@ -399,7 +421,13 @@
     "playStore-link": "",
     "appStore-link": "",
     "images": [
-     
+      "https://i.imgur.com/95YpCt7.jpg",
+      "https://i.ibb.co/g3vdwbf/Screenshot-2024-02-09-145509.png",
+      "https://i.ibb.co/4KTysxL/Screenshot-2024-02-09-145607.png",
+      "https://i.ibb.co/s6ps31x/Screenshot-2024-02-09-145709.png",
+      "https://i.ibb.co/Zg4CGvC/Screenshot-2024-02-09-145539.png",
+      "https://i.ibb.co/3mpHh9b/Screenshot-2024-02-20-200219.png",
+      "https://i.ibb.co/pdqHWQm/Screenshot-2024-02-09-145848.png"
     ],
     "description": "An e-commerce platform where users can browse products or register as sellers. Built to deliver smooth product management and secure checkout.",
     "features": [
@@ -426,7 +454,11 @@
     "playStore-link": "",
     "appStore-link": "",
     "images": [
-     
+      "https://i.ibb.co/j8w5DXz/Coffee-House.png",
+      "https://i.ibb.co/7rMFZgR/Screenshot-2024-02-20-195137.png",
+      "https://i.ibb.co/TPQWWbY/coffee-gif.gif",
+      "https://i.ibb.co/9wX0pvj/Screenshot-2024-02-20-200154.png",
+      "https://i.ibb.co/3mpHh9b/Screenshot-2024-02-20-200219.png"
     ],
     "description": "A basic web project created after learning MySQL integration with Node.js and Express. Showcases CRUD functionality with a simple interface.",
     "features": [
@@ -449,7 +481,11 @@
     "playStore-link": "",
     "appStore-link": "",
     "images": [
-     
+      "https://i.ibb.co/Ytf2wCd/Novo-Nest-Residences.png",
+      "https://i.ibb.co/PjtmG8k/novo-home.png",
+      "https://i.ibb.co/4d9fYZc/novo-apartments.png",
+      "https://i.ibb.co/YB5cnw0/novo-member.png",
+      "https://i.ibb.co/YTQxy7H/novo-admin.png"
     ],
     "description": "An apartment owner’s website for managing flat rents and maintenance. Includes multi-user authentication and an admin dashboard.",
     "features": [
@@ -476,7 +512,11 @@
     "playStore-link": "",
     "appStore-link": "",
     "images": [
-     
+      "https://i.ibb.co/bmhyhb8/Speed-Of-Creativity.png",
+      "https://i.ibb.co/kMtLtyP/speed-home.png",
+      "https://i.ibb.co/716LVcB/speed-assignments.png",
+      "https://i.ibb.co/j5F0xs0/speed-info.png",
+      "https://i.ibb.co/dkX9mpw/speed-submitted.png"
     ],
     "description": "An online platform for learning coding where users can create and complete coding assignments and challenges.",
     "technologies": [
@@ -489,13 +529,17 @@
     ]
   },
   {
-    "title": "PakeHeart Yoga",
+    "title": "PalnetEarth Yoga",
     "date": "Oct 2023",
     "website-link": "https://pakeheart-yoga.vercel.app",
     "playStore-link": "",
     "appStore-link": "",
     "images": [
-     
+       "https://i.ibb.co/89dYLGN/Palnet-Earth-Yoga.png",
+       "https://i.ibb.co/Dp0XfJj/Screenshot-2024-01-04-132747.png",
+        "https://i.ibb.co/7VfWNPn/Screenshot-2024-01-04-132813.png",
+         "https://i.ibb.co/KzYWkb7/Screenshot-2024-01-04-132848.png",
+          "https://i.ibb.co/MVgyKTS/Screenshot-2024-01-04-133754.png"
     ],
     "description": "An online educational website where admins can add class-recorded videos and users can bookmark their favorites.",
     "technologies": [
