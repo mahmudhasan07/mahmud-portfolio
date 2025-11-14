@@ -25,6 +25,7 @@ const Resume = () => {
 
     return (
         <section>
+            
             <div className='flex gap-5'>
                 {
                     tabs.map((tab) => (
