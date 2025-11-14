@@ -86,9 +86,9 @@ const ProjectDetails = () => {
                     </div>
 
                     {/* Thumbnails */}
-                    {data.images.length > 1 && (
+                    {data?.images?.length > 1 && (
                         <div className="mt-4 grid grid-cols-3 gap-2">
-                            {data.images.map((imgSrc, index) => (
+                            {data?.images.map((imgSrc, index) => (
                                 <Image
                                     key={index}
                                     src={imgSrc}
@@ -107,10 +107,10 @@ const ProjectDetails = () => {
 
                 {/* Info Section */}
                 <div className="w-full md:w-1/2 space-y-4">
-                    <h2 className="text-3xl font-bold">{data.title}</h2>
-                    <p className="text-gray-300 text-sm">{data.date}</p>
-                    <p className="text-gray-400 leading-relaxed">{data.description}</p>
-                    <p className="text-gray-400 leading-relaxed"><span className='font-semibold text-white'>Role: </span>{data.role}</p>
+                    <h2 className="text-3xl font-bold">{data?.title}</h2>
+                    <p className="text-gray-300 text-sm">{data?.date}</p>
+                    <p className="text-gray-400 leading-relaxed">{data?.description}</p>
+                    <p className="text-gray-400 leading-relaxed"><span className='font-semibold text-white'>Role: </span>{data?.role}</p>
 
                     {/* Links */}
                     <div className="flex gap-3 justify-start p-2 rounded-md">
@@ -135,7 +135,7 @@ const ProjectDetails = () => {
                     <div>
                         <h3 className="text-lg font-semibold mt-6">Technologies Used:</h3>
                         <ul className="flex flex-wrap gap-3 mt-2">
-                            {data.technologies.map((tech, index) => (
+                            {data?.technologies?.map((tech, index) => (
                                 <li key={index} className="bg-gray-800 px-3 py-1 rounded-lg text-sm">{tech}</li>
                             ))}
                         </ul>
@@ -152,7 +152,7 @@ const ProjectDetails = () => {
             </div>
 
             {/* Responsibilities Section */}
-            <div className="mt-12 mb-28">
+            <div className="mt-12 mb-20">
                 <h3 className="text-2xl font-bold mb-4">Responsibilities</h3>
                 <ul className="list-disc pl-6 space-y-2 text-gray-300">
                     {data?.responsibilities?.map((res, index) => <li key={index}>{res}</li>)}
