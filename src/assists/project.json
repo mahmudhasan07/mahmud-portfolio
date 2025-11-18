@@ -41,6 +41,45 @@
     ]
   },
   {
+    "title": "Boffo",
+    "date": "July 2025",
+    "website-link": "https://www.boffo-global.com",
+    "playStore-link": "",
+    "appStore-link": "",
+    "images": [
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763478394/Boffo/Boffo_zlxlhz.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1742486812/Boffo/titleImage_jddtvo.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763478356/Boffo/50c8e826-a963-45c7-b996-afae7be9388c.png"
+    ],
+    "description": "BOFFO is a fully responsive and visually appealing e-commerce platform designed to showcase and sell premium fashion wear. The homepage features a clean hero section highlighting key collections, along with a streamlined navigation experience for both men’s and women’s categories. It also incorporates core e-commerce features such as a search bar, cart preview, user authentication options, and collection navigation. The interface blends modern aesthetics with smooth user interactions to create a premium brand experience.",
+    "role": "Full Stack Developer (Frontend & Backend)",
+    "responsibilities": [
+      "Developed both frontend and backend for the BOFFO e-commerce platform using Next.js, React, Node.js, Express, and MongoDB with Prisma ORM.",
+      "Built and optimized RESTful APIs for products, categories, cart, orders, authentication, and customer interactions.",
+      "Implemented JWT-based authentication, route protection, optional auth guards, and secure admin access.",
+      "Integrated Cloudinary for Spaces for product image uploads with preview, deletion, and URL generation.",
+      "Implemented product management features with React Hook Form, Redux Toolkit, and RTK Query.",
+      "Optimized server and frontend performance, improving loading times, query handling, and scalability."
+    ],
+    "features": [
+      "Full user authentication (login, registration, protected routes, persistent sessions).",
+      "Admin panel for managing categories, products, orders, and homepage content.",
+      "Dynamic homepage sections with hero sliders, new arrivals, and collection highlights.",
+      "Complete e-commerce workflow: product listing → cart → checkout → order placement.",
+      "Optimized backend with cache-friendly endpoints and secure business logic."
+    ],
+    "technologies": [
+      "Next.js (Frontend)",
+      "Redux Toolkit (State Management)",
+      "Node.js (Backend)",
+      "TypeScript (Backend)",
+      "Express (Backend)",
+      "MongoDB (Database)",
+      "Prisma (ORM)",
+      "JWT (Authentication)"
+    ]
+  },
+  {
     "title": "TeachON 345",
     "date": "November 2025",
     "website-link": "https://techon345.com",
