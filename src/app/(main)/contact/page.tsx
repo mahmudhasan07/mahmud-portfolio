@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         title: "Contact | Mahmud Hasan Siddique",
         description:
             "Get in touch with Full Stack Developer Mahmud Hasan Siddique for collaborations and inquiries.",
-        images: ["https://your-domain.com/your-image.jpg"], // <-- change this
+        images: ["https://res.cloudinary.com/daudgshta/image/upload/v1763525401/portfolio/conatct_nuwgb3.png"], // <-- change this
     },
 };
 
