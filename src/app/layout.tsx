@@ -6,6 +6,7 @@ import myImage from "@/assists/myProfile1.png";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
 import ParticlesBackground from "@/components/ParticlesBackground/ParticlesBackground";
+import { baseUrl } from "@/Interfaces/BaseUrl";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,26 +19,59 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mahmud Hasan Siddique",
-  description: "Full Stack Developer | React | Next | Node(MVC) | Express | MongoDB | Mongoose | Prisma | MySQL | JavaScript | Problem-solving. Creating the Future, One Line of Code at a Time.",
+  title: "Mahmud Hasan Siddique | Full Stack Developer (React, Next.js, Node.js)",
+  description:
+    "Welcome to the portfolio of Mahmud Hasan Siddique — a Full Stack Developer specializing in React, Next.js, Node.js (MVC), Express, MongoDB, Mongoose, Prisma, MySQL, and JavaScript. Passionate about building scalable systems, intuitive UI, and modern web applications that solve real-world problems.",
+
   icons: {
-    icon: myImage.src as string
+    icon: myImage.src as string, // favicon or logo
   },
+
   keywords: [
-    "Full Stack Developer",
-    "Mahmud Hasan Siddique Full Stack Developer",
     "Mahmud Hasan Siddique",
     "Mahmud Hasan",
-    "Mahmud Hasan Siddique Developer",
-    "Mahmud Hasan Developer",
-    "Mahmud Hasan Siddique Portfolio",
+    "Full Stack Developer",
+    "Full Stack Web Developer Bangladesh",
+    "React Developer",
+    "Next.js Developer",
+    "Node.js Developer",
+    "JavaScript Developer",
+    "Prisma Developer",
+    "MongoDB Developer",
+    "Web Developer Portfolio",
+    "Full Stack Developer Portfolio",
+    "Hire Web Developer",
     "Mahmud Hasan Portfolio",
-    "Mahmud Hasan Siddique Resume",
     "Mahmud Hasan Resume",
-    "Mahmud Hasan Siddique Contact",
     "Mahmud Hasan Contact",
   ],
+
+  openGraph: {
+    title: "Mahmud Hasan Siddique | Full Stack Web Developer",
+    description:
+      "Explore the work and skills of Full Stack Developer Mahmud Hasan Siddique — specializing in React, Next.js, Node.js, Express, MongoDB, Prisma, and modern web technologies.",
+    url: `${baseUrl}`,
+    siteName: "Mahmud Hasan Siddique Portfolio",
+    type: "website",
+    images: [
+      {
+        url: "https://res.cloudinary.com/daudgshta/image/upload/v1763525410/portfolio/home_xfkqsh.png", // your OG image
+        width: 1200,
+        height: 630,
+        alt: "Mahmud Hasan Siddique - Full Stack Developer Portfolio",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Mahmud Hasan Siddique | Full Stack Developer",
+    description:
+      "View the portfolio of Full Stack Developer Mahmud Hasan Siddique and explore projects built with React, Next.js, Node.js, MongoDB & Prisma.",
+    images: ["https://res.cloudinary.com/daudgshta/image/upload/v1763525410/portfolio/home_xfkqsh.png"],
+  },
 };
+
 
 export default function RootLayout({
   children,
