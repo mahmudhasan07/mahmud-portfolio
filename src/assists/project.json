@@ -102,9 +102,11 @@
       "Optimized server logic and data handling to improve response time and scalability"
     ],
     "features": [
-      "Simple authentication for users.",
-      "Automatic token generation after successful order placement",
-      "Admin panel for category, products, and order management",
+      "Fully optimized for desktop, tablet, and mobile devices, ensuring a seamless shopping experience across all platforms.",
+      "Dynamic product sections showcasing popular mobile phones like the iPhone series, with detailed product information and pricing.",
+      "Dynamic category system, which is controlled by the admin dashboard.",
+      "Integrated subscription form for users to unlock the latest deals and offers.",
+      "Integrated customer reviews to build trust and offer social proof of the service quality.",
       "Responsive and user-friendly restaurant management workflow"
     ],
     "technologies": [
