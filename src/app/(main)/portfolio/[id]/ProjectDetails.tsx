@@ -55,7 +55,7 @@ const ProjectDetails = () => {
 
     return (
         <div className="text-white">
-            <h1 className='text-5xl font-bold my-6 text-center'>Project Details</h1>
+            <h1 className='lg:text-5xl md:text-4xl text-3xl londrina font-bold mb-6 text-center'>Project Details</h1>
 
             {/* Top Section */}
             <div className="flex flex-col md:flex-row gap-10 items-start mt-12">

@@ -3,6 +3,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { TiHome } from "react-icons/ti";
+import { GrProjects } from "react-icons/gr";
+import { CiMemoPad } from "react-icons/ci";
+import { MdContacts } from "react-icons/md";
 
 const Navbar = () => {
 
@@ -10,15 +14,15 @@ const Navbar = () => {
     const [hoveredIndex, setHoveredIndex] = useState(-1);
 
     const routes = [
-        { route: "/", name: "Home" },
-        { route: "/portfolio", name: "Portfolio" },
-        { route: "/resume", name: "Resume" },
-        { route: "/contact", name: "Contact Me" },
+        { route: "/", name: "Home", icon : <TiHome />  },
+        { route: "/portfolio", name: "Portfolio", icon : <GrProjects /> },
+        { route: "/resume", name: "Resume", icon : <CiMemoPad /> },
+        { route: "/contact", name: "Contact Me", icon : <MdContacts /> },
     ];
 
     return (
-        <div className='text-white borderNew backdrop-blur-sm bg-black/30 px-12 py-4 rounded-lg w-fit mx-auto'>
-            <div className='space-x-3'>
+        <div className='text-white borderNew backdrop-blur-sm bg-black/30 md:px-12 px-8 py-3 rounded-lg w-fit mx-auto'>
+            <div className='space-x-3 flex gap-1'>
                 {routes.map((item, idx) => (
                     <motion.div
                         key={item.route}
@@ -47,8 +51,15 @@ const Navbar = () => {
                                     />
                                 )}
                             </AnimatePresence>
-                            <div className='relative z-50' key={idx}>
-                                {item.name}
+                            <div className='relative z-50'>
+                                {/* Show icon only for mobile screens */}
+                                <div className="block text-xl sm:hidden">
+                                    {item.icon}
+                                </div>
+                                {/* Show text and icon for larger screens */}
+                                <div className="hidden sm:block text-nowrap">
+                                    {item.name}
+                                </div>
                             </div>
                         </Link>
                     </motion.div>

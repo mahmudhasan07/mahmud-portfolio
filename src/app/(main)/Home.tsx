@@ -24,13 +24,13 @@ export default function Home() {
                     Full Stack Developer
                 </motion.h1>
             </div>
-            <div className="">
+            <div className="md:top-0 top-10 relative">
                 <motion.div
                      initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                 >
-                    <Image src={myImage} alt="Mahmud Hasan Siddique" className="w-[28rem] mx-auto" />
+                    <Image src={myImage} alt="Mahmud Hasan Siddique" className="lg:w-[28rem] w-[25rem] mx-auto" />
                 </motion.div>
             </div>
         </div>

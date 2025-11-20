@@ -16,7 +16,7 @@ const Portfolio = () => {
 
     return (
         <section className='relative'>
-            <h1 className='text-5xl font-bold mb-10 text-center'>My Latest Projects</h1>
+            <h1 className='lg:text-5xl md:text-4xl text-3xl londrina font-bold mb-10 text-center'>My Latest Projects</h1>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20'>
                 {

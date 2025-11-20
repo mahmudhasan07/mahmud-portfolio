@@ -3,17 +3,14 @@ import React, { useState } from 'react';
 import { FaFacebookF, FaLinkedinIn, FaPhoneVolume } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaMapLocationDot } from "react-icons/fa6";
-// import { useBookingMutation } from '@/Redux/Api/bookingApi';
 import ShowToastify from '@/utils/ShowToastify';
 import { ToastContainer } from 'react-toastify';
 import myImage from "@/assists/myProfile1.png"
 import { IoLogoGithub } from "react-icons/io";
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
-
-    //   const [bookingFn] = useBookingMutation();
-
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault(); // prevent page refresh
@@ -22,30 +19,23 @@ const Contact = () => {
         const data = Object.fromEntries(formData.entries()); // convert to object
 
         console.log(data); // log all values
-
-        // const { data: res, error } = await bookingFn(data);
-
-        // console.log(res);
-        // console.log(error);
-
-        // if (error && ('data' in error || 'response' in error)) {
-        //   const data = 'data' in error && error.data as any;
-        //   ShowToastify({ error: data?.message });
-        // } else {
-        //   ShowToastify({ success: res.message });
-        // }
-
-
     };
 
     return (
         <section className=''>
-            <h1 className='text-5xl font-bold text-center mb-7'>Contact With Me</h1>
-            <section className="container mx-auto md:px-7 px-3 flex md:flex-nowrap flex-wrap justify-center lg:gap-8 md:gap-5 gap-3 h-full">
-                <div className='md:w-1/3 borderNew p-5'>
-                    <Image src={myImage} alt="My Image" className=' mb-2 mx-auto'></Image>
+            <h1 className='lg:text-5xl md:text-4xl text-3xl londrina font-bold text-center mb-7'>Contact With Me</h1>
+            <section className=" flex md:flex-nowrap flex-wrap justify-center lg:gap-8 md:gap-4 gap-3 h-full md:pb-0 pb-14">
+
+                {/* Left Contact Information */}
+                <motion.div
+                    className="md:w-1/3 borderNew p-5"
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <Image src={myImage} alt="My Image" className='mb-2 mx-auto' />
                     <h1 className="text-2xl font-bold mb-1">Mahmud Hasan Siddique</h1>
-                    <h3 >Full Stack Developer</h3>
+                    <h3>Full Stack Developer</h3>
                     <p className='my-3'>Full Stack Developer | React | Next | Node(MVC) | Express | MongoDB | Mongoose | Prisma | MySQL | JavaScript | Problem-solving. Creating the Future, One Line of Code at a Time.</p>
 
                     <div>
@@ -61,11 +51,15 @@ const Contact = () => {
                             <IoLogoGithub className='borderNew p-2 text-4xl' />
                         </div>
                     </div>
+                </motion.div>
 
-                </div>
-
-                <div className='md:w-2/3 rounded-lg p-8 shadow-lg borderNew'>
-                    {/* add onSubmit here */}
+                {/* Right Form */}
+                <motion.div
+                    className='md:w-2/3 w-full rounded-lg p-8 shadow-lg borderNew'
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                >
                     <form onSubmit={handleSubmit} className="rounded-lg gap-4 space-y-4">
                         <div className="grid md:grid-cols-2 gap-4">
                             <div className='space-y-2'>
@@ -74,22 +68,18 @@ const Contact = () => {
                             </div>
                             <div className='space-y-2'>
                                 <label className='font-semibold'>Phone number *</label> <br />
-                                <input placeholder="Last Name" name='email' required className="p-3 rounded-md border-[#AAAAAA] border w-full" />
+                                <input placeholder="Phone Number" name='phone' required className="p-3 rounded-md border-[#AAAAAA] border w-full" />
                             </div>
                         </div>
 
-                        <div className="">
-                            <div className='space-y-2'>
-                                <label className='font-semibold'>Email *</label> <br />
-                                <input placeholder="Phone Number" required name='email' className="p-3 rounded-md border-[#AAAAAA] border w-full" />
-                            </div>
+                        <div className="space-y-2">
+                            <label className='font-semibold'>Email *</label> <br />
+                            <input placeholder="Email" required name='email' className="p-3 rounded-md border-[#AAAAAA] border w-full" />
                         </div>
 
-                        <div className="">
-                            <div className='space-y-2'>
-                                <label className='font-semibold'>Subject *</label> <br />
-                                <input placeholder="Subject" type='text' name='subject' required className="p-3 rounded-md border-[#AAAAAA] border w-full" />
-                            </div>
+                        <div className="space-y-2">
+                            <label className='font-semibold'>Subject *</label> <br />
+                            <input placeholder="Subject" type='text' name='subject' required className="p-3 rounded-md border-[#AAAAAA] border w-full" />
                         </div>
 
                         <div className="space-y-2">
@@ -97,13 +87,21 @@ const Contact = () => {
                             <textarea placeholder="Additional Details" name="description" className="p-3 rounded-md border-[#AAAAAA] border w-full h-28"></textarea>
                         </div>
 
-                        <button type="submit" className="bg-primary px-10 font-semibold text-white py-3 rounded hover:bg-blue-700">
+                        <motion.button
+                            type="submit"
+                            className="bg-primary px-10 font-semibold text-white py-3 rounded hover:bg-blue-700"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.98 }}
+                            transition={{ type: 'spring', stiffness: 300 }}
+                        >
                             Send Message
-                        </button>
+                        </motion.button>
                     </form>
-                </div>
+                </motion.div>
             </section>
-            <ToastContainer></ToastContainer>
+
+            {/* Toast Notification */}
+            <ToastContainer />
         </section>
     );
 };
