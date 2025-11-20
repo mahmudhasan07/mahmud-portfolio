@@ -27,7 +27,7 @@ const Resume = () => {
     return (
         <section>
             {/* Tab Navigation */}
-            <div className='flex flex-wrap gap-5'>
+            <div className='flex md:flex-nowrap flex-wrap gap-5'>
                 {
                     tabs.map((tab) => (
                         <motion.button
@@ -45,7 +45,7 @@ const Resume = () => {
             </div>
 
             {/* Animated Content */}
-            <div className='mt-6 md:pb-0 pb-14'>
+            <div className='mt-6 md:pb-10 pb-14'>
                 <motion.div
                     key={activeTab}  // Ensures a re-animation when switching tabs
                     initial={{ opacity: 0 }}
