@@ -34,7 +34,7 @@ const Contact = () => {
                     transition={{ duration: 0.6 }}
                 >
                     <Image src={myImage} alt="My Image" className='mb-2 mx-auto' />
-                    <h1 className="text-2xl font-bold mb-1">Mahmud Hasan Siddique</h1>
+                    <h1 className="md:text-2xl text-xl font-bold mb-1">Mahmud Hasan Siddique</h1>
                     <h3>Full Stack Developer</h3>
                     <p className='my-3'>Full Stack Developer | React | Next | Node(MVC) | Express | MongoDB | Mongoose | Prisma | MySQL | JavaScript | Problem-solving. Creating the Future, One Line of Code at a Time.</p>
 
@@ -55,7 +55,7 @@ const Contact = () => {
 
                 {/* Right Form */}
                 <motion.div
-                    className='md:w-2/3 w-full rounded-lg p-8 shadow-lg borderNew'
+                    className='md:w-2/3 w-full rounded-lg md:p-8 p-4 shadow-lg borderNew'
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}

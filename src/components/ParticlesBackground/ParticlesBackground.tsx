@@ -17,7 +17,7 @@ const ParticlesBackground = () => {
   }, []);
 
   const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log("Particles loaded:", container);
+    // console.log("Particles loaded:", container);
   };
 
   const options = useMemo(() => nasaParticlesConfig, []);
