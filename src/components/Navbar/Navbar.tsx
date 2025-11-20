@@ -51,9 +51,9 @@ const Navbar = () => {
                                     />
                                 )}
                             </AnimatePresence>
-                            <div className='relative z-50'>
+                            <div className='relative z-50 flex gap-1'>
                                 {/* Show icon only for mobile screens */}
-                                <div className="block text-xl sm:hidden">
+                                <div className="block md:text-xl text-2xl my-auto">
                                     {item.icon}
                                 </div>
                                 {/* Show text and icon for larger screens */}

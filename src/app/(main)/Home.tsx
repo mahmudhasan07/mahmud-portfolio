@@ -30,7 +30,7 @@ export default function Home() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                 >
-                    <Image src={myImage} alt="Mahmud Hasan Siddique" className="lg:w-[28rem] w-[25rem] mx-auto" />
+                    <Image src={myImage} alt="Mahmud Hasan Siddique" className="lg:w-[28rem] md:w-[25rem] w-full mx-auto" />
                 </motion.div>
             </div>
         </div>
