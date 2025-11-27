@@ -1,17 +1,17 @@
 "use client";
 import { useState, useEffect } from "react";
+import Script from "next/script";
 
 export default function PlaidLinkButton() {
-  const [linkToken, setLinkToken] = useState(null);
+  const [linkToken, setLinkToken] = useState<string | null>(null);
 
   useEffect(() => {
-    // Request link token from backend when component loads
     async function createLinkToken() {
-      const res = await fetch("/api/plaid/create-link-token", {
+      const res = await fetch("http://localhost:7010/api/v1/plaid/create-link-token", {
         method: "POST",
       });
       const data = await res.json();
-      setLinkToken(data.link_token);
+      setLinkToken(data?.data?.link_token);
     }
 
     createLinkToken();
@@ -19,12 +19,15 @@ export default function PlaidLinkButton() {
 
   const openPlaidLink = () => {
     if (!linkToken) return;
+    if (!window.Plaid) {
+      console.error("Plaid script not loaded yet!");
+      return;
+    }
 
     const handler = window.Plaid.create({
       token: linkToken,
-      onSuccess: async (public_token : any) => {
-        // Send public_token to backend to exchange for access_token
-        const res = await fetch("/api/plaid/exchange-public-token", {
+      onSuccess: async (public_token: any) => {
+        const res = await fetch("http://localhost:7010/api/v1/plaid/exchange-public-token", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -34,13 +37,9 @@ export default function PlaidLinkButton() {
 
         const data = await res.json();
         console.log("Access token:", data.access_token);
-        
-        // Proceed to fetch data like transactions, income, etc.
       },
-      onExit: (err : any) => {
-        if (err) {
-          console.error("Plaid Link Error:", err);
-        }
+      onExit: (err: any) => {
+        if (err) console.error("Plaid Link Error:", err);
       },
     });
 
@@ -48,8 +47,17 @@ export default function PlaidLinkButton() {
   };
 
   return (
-    <button onClick={openPlaidLink} className="btn btn-primary">
-      Link Bank Account
-    </button>
+    <>
+      {/* Load Plaid script */}
+      <Script
+        src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"
+        strategy="afterInteractive"
+        onLoad={() => console.log("Plaid script loaded")}
+      />
+
+      <button onClick={openPlaidLink} className="btn btn-primary">
+        Link Bank Account
+      </button>
+    </>
   );
 }

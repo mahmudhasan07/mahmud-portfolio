@@ -85,6 +85,8 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
           rel="stylesheet"
         />
+        <script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen `}

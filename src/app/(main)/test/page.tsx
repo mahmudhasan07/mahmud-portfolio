@@ -1,5 +1,9 @@
+import PlaidLinkButton from "./PlaidLinkButton";
+
 export default function Page() {
     return (
-        <div></div>
+        <div>
+            <PlaidLinkButton></PlaidLinkButton>
+        </div>
     );
 }
