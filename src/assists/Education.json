@@ -1,29 +1,29 @@
 [
   {
-    "title": "Bachelor of Science in Computer Science and Engineering",
-    "institution": "National University",
-    "description": "I am studying a B.Sc. in Computer Science and Engineering at the National University. On my educational journey, I always try to make a strong foundation in computer science, algorithms, and database management.",
-    "startDate": "2019",
+    "title": "Bachelor of Science (B.Sc.) in Computer Science and Engineering",
+    "institution": "National University, Bangladesh",
+    "description": "Focused on core computer science subjects including data structures, algorithms, and database management systems. Developed strong problem-solving and programming fundamentals through academic coursework.",
+    "session": "2019 – 2020",
     "endDate": "2025",
-    "CGPA": "3.14",
+    "cgpa": "3.14",
     "outOf": "4.00"
   },
   {
-    "title": "HSC",
+    "title": "Higher Secondary Certificate (HSC) – Science",
     "institution": "Birshreshtha Noor Mohammad Public College",
-    "description": "I completed my Higher Secondary Certificate (HSC) from the Science group, where I focused on subjects like Physics, Chemistry, Biology, and Mathematics. This foundation helped me develop strong analytical and problem-solving skills that guided my path toward computer science.",
-    "startDate": "2016",
+    "description": "Completed HSC in the Science group with emphasis on Physics, Chemistry, Mathematics, and Biology. Built analytical thinking and quantitative problem-solving skills.",
+    "session": "2016 – 2017",
     "endDate": "2018",
-    "CGPA": "3.92",
+    "cgpa": "3.92",
     "outOf": "5.00"
   },
   {
-    "title": "SSC",
-    "institution": "Motijheel Model High School And College",
-    "description": "I completed my Secondary School Certificate (SSC) in the Science group, gaining knowledge in core science and mathematics subjects. This stage of education built my logical thinking and curiosity for technology, which later inspired me to pursue higher studies in engineering.",
-    "startDate": "2014",
+    "title": "Secondary School Certificate (SSC) – Science",
+    "institution": "Motijheel Model High School and College",
+    "description": "Studied core science and mathematics subjects, strengthening logical reasoning and academic discipline, which motivated further studies in engineering.",
+    "session": "2014 - 2015",
     "endDate": "2016",
-    "CGPA": "5.00",
+    "cgpa": "5.00",
     "outOf": "5.00"
   }
 ]

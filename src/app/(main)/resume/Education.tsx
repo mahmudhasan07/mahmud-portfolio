@@ -21,9 +21,9 @@ const Education = () => {
                             <div className='flex justify-between'>
                                 <div>
                                     <h2 className='text-2xl font-semibold'>{item.title}</h2>
-                                    <p>{item.institution} <span>({item.startDate} - {item.endDate})</span></p>
+                                    <p>{item.institution} <span>({item.session} - {item.endDate})</span></p>
                                 </div>
-                                <h1 className='bgcolor w-fit rounded-lg my-auto px-4 py-2 font-semibold'>{item.CGPA}/{item.outOf}</h1>
+                                <h1 className='bgcolor w-fit rounded-lg my-auto px-4 py-2 font-semibold'>{item.cgpa}/{item.outOf}</h1>
                             </div>
                             <p>{item.description}</p>
                         </motion.div>
