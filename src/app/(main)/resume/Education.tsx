@@ -19,9 +19,11 @@ const Education = () => {
                             transition={{ duration: 0.5, delay: idx * 0.2 }}  // Staggered delay
                         >
                             <div className='flex justify-between'>
-                                <div>
+                                <div className='space-y-1'>
                                     <h2 className='text-2xl font-semibold'>{item.title}</h2>
-                                    <p>{item.institution} <span>({item.session} - {item.endDate})</span></p>
+                                    <p className='font-semibold'>{item.institution}</p>
+                                    <p><span className='font-semibold'>Session:</span> {item.session}</p>
+                                    <p><span className='font-semibold'>Passing Year:</span> {item.endDate}</p>
                                 </div>
                                 <h1 className='bgcolor w-fit rounded-lg my-auto px-4 py-2 font-semibold'>{item.cgpa}/{item.outOf}</h1>
                             </div>
