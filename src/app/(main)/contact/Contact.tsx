@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { FaFacebookF, FaLinkedinIn, FaPhoneVolume } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-import { FaMapLocationDot } from "react-icons/fa6";
 import ShowToastify from '@/utils/ShowToastify';
 import { ToastContainer } from 'react-toastify';
 import myImage from "@/assists/myProfile1.png"
