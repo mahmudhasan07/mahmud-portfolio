@@ -91,17 +91,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen `}
       >
-        <div className="absolute top-0 left-0 right-0 h-full">
+        {/* <div className="absolute top-0 left-0 right-0 h-full">
           <Image src={bgImage} alt="" className="h-full"></Image>
         </div>
-        <ParticlesBackground />
+        <ParticlesBackground /> */}
 
         <div className="relative container text-white pt-12 pb-2">
           {children}
         </div>
-        <div className="fixed text-white container mx-auto w-fit left-1/2 -translate-x-1/2  bottom-1 ">
+        {/* <div className="fixed text-white container mx-auto w-fit left-1/2 -translate-x-1/2  bottom-1 ">
           <Navbar></Navbar>
-        </div>
+        </div> */}
       </body>
     </html>
   );

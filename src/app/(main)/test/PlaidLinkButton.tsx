@@ -55,7 +55,7 @@ export default function PlaidLinkButton() {
         onLoad={() => console.log("Plaid script loaded")}
       />
 
-      <button onClick={openPlaidLink} className="btn btn-primary">
+      <button onClick={openPlaidLink} className="btn btn-primary text-black">
         Link Bank Account
       </button>
     </>
