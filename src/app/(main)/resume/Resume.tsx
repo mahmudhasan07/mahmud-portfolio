@@ -27,13 +27,13 @@ const Resume = () => {
     return (
         <section>
             {/* Tab Navigation */}
-            <div className='flex md:flex-nowrap flex-wrap gap-5'>
+            <div className='flex flex-nowrap md:gap-5 gap-2'>
                 {
                     tabs.map((tab) => (
                         <motion.button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
-                            className={`w-full text-lg py-4 borderNew2  font-semibold ${activeTab === tab ? "text-secondary" : ""}`}
+                            className={`w-full md:text-lg text-base md:py-4 py-2 borderNew2  font-semibold ${activeTab === tab ? "text-secondary" : ""}`}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             transition={{ type: "spring", stiffness: 300 }}

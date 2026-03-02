@@ -70,6 +70,9 @@ textarea {
 .bgcolor {
   background: linear-gradient(90deg, #f51b1b, #6d68ff);
 }
+.bgcolor2 {
+  background: linear-gradient(90deg, #f33c3c, #8d8af0);
+}
 
 input {
  background: linear-gradient(
