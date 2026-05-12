@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import bgImage from "@/assists/bg.png";
+import bgImage from "@/assists/bg.jpg";
 import myImage from "@/assists/myProfile1.png";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
@@ -92,7 +92,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen `}
       >
         <div className="absolute top-0 left-0 right-0 h-full">
-          <Image src={`https://res.cloudinary.com/daudgshta/image/upload/v1766212481/portfolio/bg_gxoxwe.png`} height={0} width={3000} alt="" className="h-full"></Image>
+          <Image src={bgImage} height={0} width={3000} alt="" className="h-full"></Image>
         </div>
         <ParticlesBackground />
 
