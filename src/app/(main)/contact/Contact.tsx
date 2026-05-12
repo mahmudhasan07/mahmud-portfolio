@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { FaFacebookF, FaLinkedinIn, FaPhoneVolume } from "react-icons/fa6";
+import { FaFacebookF, FaLinkedinIn, FaPhoneVolume, FaWhatsapp } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import ShowToastify from '@/utils/ShowToastify';
 import { ToastContainer } from 'react-toastify';
@@ -8,6 +8,7 @@ import myImage from "@/assists/myProfile1.png"
 import { IoLogoGithub } from "react-icons/io";
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Contact = () => {
 
@@ -45,9 +46,10 @@ const Contact = () => {
                     <div className='space-y-2'>
                         <p className='font-semibold text-lg'>Find Me On:</p>
                         <div className='flex gap-3'>
-                            <FaFacebookF className='borderNew p-2 text-4xl' />
-                            <FaLinkedinIn className='borderNew p-2 text-4xl' />
-                            <IoLogoGithub className='borderNew p-2 text-4xl' />
+                            <Link target='_blank' href={`https://www.facebook.com/mahmudnirob.t`}><FaFacebookF className='borderNew p-2 text-4xl' /></Link>
+                            <Link target='_blank' href={`https://www.linkedin.com/in/mahmud-hasan-siddique-8873b221a/`}><FaLinkedinIn className='borderNew p-2 text-4xl' /></Link>
+                            <Link target='_blank' href={`https://github.com/mahmudhasan07`}><IoLogoGithub className='borderNew p-2 text-4xl' /></Link>
+                            <Link target='_blank' href={`https://wa.me/8801625598782`}><FaWhatsapp  className='borderNew p-2 text-4xl' /></Link>
                         </div>
                     </div>
                 </motion.div>

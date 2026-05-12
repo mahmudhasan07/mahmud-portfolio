@@ -1,9 +1,52 @@
 [
   {
+    "title": "Nivaii",
+    "date": "January 2026",
+    "website-link": "",
+    "playStore-link": "https://play.google.com/store/apps/details?id=com.nivaii.app.uk",
+    "appStore-link": "https://apps.apple.com/ae/app/nivaii/id6752244853",
+    "images": [
+      "https://res.cloudinary.com/daudgshta/image/upload/v1772435989/Project%20images/nivaii/cf318c52-8bb5-4399-8f44-5ef1d129c119.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1772436006/Project%20images/nivaii/9bd67ede-37c1-409c-9788-e550efe14382.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1772436096/Project%20images/nivaii/4713b037-0a07-4457-aeb8-d2550b8b92b3.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1772436113/Project%20images/nivaii/1182feec-5351-4150-86eb-8f6709b30c93.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1772436182/Project%20images/nivaii/dbb691e2-88c3-4c0a-b2e8-68b21b0f1833.png",
+      "https://res.cloudinary.com/daudgshta/image/upload/v1772436197/Project%20images/nivaii/9037b93e-98ad-4fef-9242-e14e220d5f23.png"
+    ],
+    "description": "An all-in-one e-commerce platform for buying and selling new and used products with secure transactions and courier support. It features a user-friendly interface, easy product management, and a robust payment system. Nivaii provides a seamless shopping experience, making it an ideal choice for online shopping.",
+    "role": "Backend Developer",
+    "responsibilities": [
+      "Developed and maintained backend APIs using Node.js, Express, and TypeScript",
+      "Designed and managed database schemas using Prisma ORM with MongoDB",
+      "Implemented JWT-based authentication and authorization for users and admins",
+      "Built endpoints for service create, service booking, token generation, and dashboard management like users profiles and their service history, booking and ratings",
+      "User friendly error handling and input validation to ensure data integrity",
+      "Worked closely with the frontend team to ensure seamless API integration and performance",
+      "Optimized server logic and data handling to improve response time and scalability"
+    ],
+    "features": [
+      "Easy Sign-Up with Email, Apple & Google.",
+      "Buy & Sell new and used products.",
+      "Like & Buy feature for quick purchases.",
+      "Courier Selection and order tracking.",
+      "Secure payment transactions.",
+      "Responsive and user-friendly restaurant management workflow"
+    ],
+    "technologies": [
+      "Node.js (Backend)",
+      "TypeScript (Backend)",
+      "Express (Backend)",
+      "MongoDB (Database)",
+      "Prisma (ORM)",
+      "JWT (Authentication)",
+      "Stripe (Payment Gateway)"
+    ]
+  },
+  {
     "title": "Levaro",
     "date": "November 2025",
     "website-link": "",
-    "playStore-link": "",
+    "playStore-link": "https://play.google.com/store/apps/details?id=com.levaro.app.levaro&pcampaignid=web_share",
     "appStore-link": "https://apps.apple.com/ae/app/levaro/id6754184610",
     "images": [
       "https://res.cloudinary.com/daudgshta/image/upload/v1763087435/Project%20images/Levaro/On_boarding_1_kyfknk.png",
@@ -576,11 +619,11 @@
     "playStore-link": "",
     "appStore-link": "",
     "images": [
-       "https://i.ibb.co/89dYLGN/Palnet-Earth-Yoga.png",
-       "https://i.ibb.co/Dp0XfJj/Screenshot-2024-01-04-132747.png",
-        "https://i.ibb.co/7VfWNPn/Screenshot-2024-01-04-132813.png",
-         "https://i.ibb.co/KzYWkb7/Screenshot-2024-01-04-132848.png",
-          "https://i.ibb.co/MVgyKTS/Screenshot-2024-01-04-133754.png"
+      "https://i.ibb.co/89dYLGN/Palnet-Earth-Yoga.png",
+      "https://i.ibb.co/Dp0XfJj/Screenshot-2024-01-04-132747.png",
+      "https://i.ibb.co/7VfWNPn/Screenshot-2024-01-04-132813.png",
+      "https://i.ibb.co/KzYWkb7/Screenshot-2024-01-04-132848.png",
+      "https://i.ibb.co/MVgyKTS/Screenshot-2024-01-04-133754.png"
     ],
     "description": "An online educational website where admins can add class-recorded videos and users can bookmark their favorites.",
     "technologies": [

@@ -36,7 +36,7 @@ const Experience = () => {
               <p className="mt-2">{pos.description}</p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {pos.skills.map((skill, sIdx) => (
-                  <span key={sIdx} className="bgcolor px-2 py-1 rounded text-sm">
+                  <span key={sIdx} className="bgcolor px-2 py-1 rounded text-sm font-semibold">
                     {skill}
                   </span>
                 ))}
