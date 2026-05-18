@@ -20,6 +20,15 @@ type TinyMCE = {
     menubar: boolean;
     plugins: string;
     toolbar: string;
+    font_family_formats: string;
+    font_size_formats: string;
+    line_height_formats: string;
+    style_formats: {
+      title: string;
+      block?: string;
+      inline?: string;
+      styles?: Record<string, string>;
+    }[];
     branding: boolean;
     promotion: boolean;
     placeholder: string;
@@ -66,17 +75,58 @@ const AddBlog = () => {
 
       const editors = await window.tinymce.init({
         selector: `#${editorId}`,
-        height: 360,
+        height: 420,
         menubar: false,
         plugins:
           "advlist autolink lists link image charmap preview anchor searchreplace visualblocks code fullscreen insertdatetime media table help wordcount",
         toolbar:
-          "undo redo | blocks | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media table | removeformat preview code",
+          "undo redo | blocks fontfamily fontsize lineheight | bold italic underline strikethrough superscript subscript | forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styles | link image media table | removeformat preview code",
+        font_family_formats:
+          "Inter=Inter,Arial,sans-serif; Arial=arial,helvetica,sans-serif; Georgia=georgia,palatino,serif; Times New Roman=times new roman,times,serif; Courier New=courier new,courier,monospace; Verdana=verdana,geneva,sans-serif; Tahoma=tahoma,arial,helvetica,sans-serif; Trebuchet MS=trebuchet ms,geneva,sans-serif; Impact=impact,chicago; Kaushan Script='Kaushan Script',cursive",
+        font_size_formats: "12px 14px 16px 18px 20px 24px 28px 32px 36px 42px 48px",
+        line_height_formats: "1 1.2 1.4 1.6 1.8 2 2.4",
+        style_formats: [
+          {
+            title: "Lead paragraph",
+            block: "p",
+            styles: { fontSize: "20px", lineHeight: "1.8", fontWeight: "500" },
+          },
+          {
+            title: "Small muted text",
+            inline: "span",
+            styles: { fontSize: "14px", color: "#6b7280" },
+          },
+          {
+            title: "Highlighted text",
+            inline: "span",
+            styles: { backgroundColor: "#fff3a3", color: "#111827" },
+          },
+          {
+            title: "Callout block",
+            block: "blockquote",
+            styles: {
+              borderLeft: "4px solid #6D68FF",
+              margin: "18px 0",
+              padding: "12px 18px",
+              backgroundColor: "#f3f4ff",
+            },
+          },
+          {
+            title: "Inline code",
+            inline: "code",
+            styles: {
+              backgroundColor: "#f3f4f6",
+              borderRadius: "4px",
+              color: "#dc2626",
+              padding: "2px 6px",
+            },
+          },
+        ],
         branding: false,
         promotion: false,
         placeholder: "Write your blog description...",
         content_style:
-          "body { font-family: Inter, Arial, sans-serif; font-size: 16px; line-height: 1.7; color: #111827; }",
+          "body { font-family: Inter, Arial, sans-serif; font-size: 16px; line-height: 1.7; color: #111827; } h1,h2,h3,h4,h5,h6 { font-weight: 700; line-height: 1.25; } blockquote { color: #1f2937; }",
         setup: (editor) => {
           initializedEditor = editor;
           editor.on("init change keyup undo redo", () => {
