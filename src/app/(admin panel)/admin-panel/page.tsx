@@ -10,6 +10,7 @@ import {
   FiMap,
   FiLayers,
 } from "react-icons/fi";
+import LogoutButton from "./LogoutButton";
 
 export const metadata: Metadata = {
   title: "Admin Panel | Mahmud Portfolio",
@@ -70,13 +71,16 @@ const adminRoutes = [
 export default function AdminPanelPage() {
   return (
     <section className="pb-24">
-      <div className="mb-8 text-center">
-        <h1 className="londrina mb-3 text-3xl font-bold md:text-4xl lg:text-5xl">
-          Admin Panel
-        </h1>
-        <p className="mx-auto max-w-2xl text-white/70">
-          Choose where you want to go and manage your portfolio content.
-        </p>
+      <div className="mb-8 flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 className="londrina mb-3 text-3xl font-bold md:text-4xl lg:text-5xl">
+            Admin Panel
+          </h1>
+          <p className="max-w-2xl text-white/70">
+            Choose where you want to go and manage your portfolio content.
+          </p>
+        </div>
+        <LogoutButton />
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">

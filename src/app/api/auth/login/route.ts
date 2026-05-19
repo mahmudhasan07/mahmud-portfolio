@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { ObjectId } from "mongodb";
 import { createAdminToken, AUTH_COOKIE_NAME } from "@/lib/jwt";
 import { getDatabase } from "@/lib/mongodb";
 import { verifyPassword } from "@/lib/password";
@@ -32,7 +31,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const adminId = admin._id instanceof ObjectId ? admin._id.toString() : String(admin._id);
+    const adminId = String(admin._id);
     const token = await createAdminToken({
       sub: adminId,
       email: admin.email,

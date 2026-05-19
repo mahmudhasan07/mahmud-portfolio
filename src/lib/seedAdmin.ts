@@ -5,7 +5,7 @@ export const SEED_ADMIN_EMAIL = "mahmudhasan.hb07@gmail.com";
 const SEED_ADMIN_PASSWORD = "Mahmud07@@";
 
 export type AdminUser = {
-  _id: unknown;
+  _id?: unknown;
   email: string;
   passwordHash: string;
   role: "ADMIN";
