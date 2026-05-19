@@ -7,6 +7,7 @@ import {
   FiEdit3,
   FiFolder,
   FiGrid,
+  FiMap,
   FiLayers,
 } from "react-icons/fi";
 
@@ -51,6 +52,18 @@ const adminRoutes = [
     description: "View and manage existing portfolio projects.",
     href: "/admin-panel/my-projects",
     icon: FiGrid,
+  },
+  {
+    title: "My Education",
+    description: "View, update, and delete education history.",
+    href: "/admin-panel/my-education",
+    icon: FiBookOpen,
+  },
+  {
+    title: "My Experience",
+    description: "View, update, and delete company experience.",
+    href: "/admin-panel/my-experience",
+    icon: FiMap,
   },
 ];
 
