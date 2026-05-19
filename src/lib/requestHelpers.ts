@@ -54,6 +54,20 @@ export const parseStringArray = (formData: FormData, key: string) => {
   }
 };
 
+export const parseFormJson = <T>(formData: FormData, key: string, fallback: T): T => {
+  const value = formData.get(key);
+
+  if (typeof value !== "string" || !value.trim()) {
+    return fallback;
+  }
+
+  try {
+    return JSON.parse(value) as T;
+  } catch {
+    return fallback;
+  }
+};
+
 export const getRequiredJsonString = (
   body: Record<string, unknown>,
   key: string

@@ -1,6 +1,6 @@
 import crypto from "crypto";
 
-type CloudinaryUpload = {
+export type CloudinaryUpload = {
   url: string;
   secureUrl: string;
   publicId: string;
@@ -91,3 +91,45 @@ export const uploadFileToCloudinary = async (
 
 export const uploadFilesToCloudinary = async (files: File[], folderName: string) =>
   Promise.all(files.map((file) => uploadFileToCloudinary(file, folderName)));
+
+export const deleteCloudinaryResource = async (
+  publicId: string,
+  resourceType = "image"
+) => {
+  const { cloudName, apiKey, apiSecret } = getCloudinaryConfig();
+  const timestamp = Math.round(Date.now() / 1000).toString();
+  const signature = createSignature({ public_id: publicId, timestamp }, apiSecret);
+  const formData = new FormData();
+
+  formData.append("public_id", publicId);
+  formData.append("api_key", apiKey);
+  formData.append("timestamp", timestamp);
+  formData.append("signature", signature);
+
+  const response = await fetch(
+    `https://api.cloudinary.com/v1_1/${cloudName}/${resourceType}/destroy`,
+    {
+      method: "POST",
+      body: formData,
+    }
+  );
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Cloudinary delete failed: ${errorText}`);
+  }
+
+  return response.json();
+};
+
+export const deleteCloudinaryResources = async (
+  resources: Pick<CloudinaryUpload, "publicId" | "resourceType">[]
+) => {
+  await Promise.allSettled(
+    resources
+      .filter((resource) => resource.publicId)
+      .map((resource) =>
+        deleteCloudinaryResource(resource.publicId, resource.resourceType ?? "image")
+      )
+  );
+};
