@@ -1,31 +1,44 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
-import { jwtDecode } from "jwt-decode";
-export function middleware(request: NextRequest) {
-  // const loginRoute = `${request.nextUrl.origin}/login`;
-  const homeRoute = `${request.nextUrl.origin}/login`;
-  // const dashboardRoute = `${request.nextUrl.origin}/dashboard`;
-  // const adminRoutes = ["/", "/event-creator", "/running-event", "/subscription", "/transaction", "/users"]
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+import { AUTH_COOKIE_NAME, verifyAdminToken } from "@/lib/jwt";
 
+const getLoginUrl = (request: NextRequest) => {
+  const loginUrl = new URL("/login", request.url);
+  loginUrl.searchParams.set("next", request.nextUrl.pathname);
 
-  // const token = request.cookies.get('accessToken')?.value;
-  // if (!token) {
-  //   return NextResponse.redirect(new URL(homeRoute, request.url));
-  // }
-  // const userInfo = jwtDecode(token as string)
+  return loginUrl;
+};
 
-  // const currentPath = request.nextUrl.pathname;
+export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+  const token = request.cookies.get(AUTH_COOKIE_NAME)?.value;
+  const payload = await verifyAdminToken(token);
 
-  // // Redirect based on role and route
-  // if ('role' in userInfo && userInfo?.role !== 'ADMIN' && adminRoutes.some((e) => currentPath.startsWith(e))) {
-  //   // Prevent ADMIN from accessing /services
-  //   return NextResponse.redirect(new URL(homeRoute, request.url));
-  // }
+  if (pathname === "/login" && payload) {
+    return NextResponse.redirect(new URL("/admin-panel", request.url));
+  }
 
-  // // Allow the request to proceed if the token exists
-  // return NextResponse.next();
+  const isAdminPage = pathname.startsWith("/admin-panel");
+  const isAdminApi = pathname.startsWith("/api/admin");
+
+  if (!isAdminPage && !isAdminApi) {
+    return NextResponse.next();
+  }
+
+  if (payload?.role === "ADMIN") {
+    return NextResponse.next();
+  }
+
+  if (isAdminApi) {
+    return NextResponse.json(
+      { success: false, message: "Unauthorized." },
+      { status: 401 }
+    );
+  }
+
+  return NextResponse.redirect(getLoginUrl(request));
 }
 
 export const config = {
-  // matcher: ["/"], // Apply middleware to the /services route
+  matcher: ["/login", "/admin-panel/:path*", "/api/admin/:path*"],
 };
