@@ -41,6 +41,9 @@ const cleanList = (items: string[]) => items.map((item) => item.trim()).filter(B
 
 const AddExperience = () => {
   const [form, setForm] = useState<ExperienceForm>(initialForm);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+  const [submitError, setSubmitError] = useState("");
 
   const handleCompanyFieldChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -129,7 +132,7 @@ const AddExperience = () => {
     }));
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const experienceValues = {
@@ -147,6 +150,32 @@ const AddExperience = () => {
     };
 
     console.log("Experience values:", experienceValues);
+
+    setIsSubmitting(true);
+    setSubmitMessage("");
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/admin/experiences", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(experienceValues),
+      });
+      const result = (await response.json()) as { message?: string; data?: unknown };
+
+      if (!response.ok) {
+        throw new Error(result.message ?? "Failed to create experience.");
+      }
+
+      console.log("Saved experience:", result.data);
+      setSubmitMessage(result.message ?? "Experience created successfully.");
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "Failed to create experience.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -372,10 +401,13 @@ const AddExperience = () => {
 
         <button
           type="submit"
-          className="bgcolor inline-flex items-center justify-center rounded-md px-10 py-3 font-semibold text-white transition hover:opacity-90"
+          disabled={isSubmitting}
+          className="bgcolor inline-flex items-center justify-center rounded-md px-10 py-3 font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          Add Experience
+          {isSubmitting ? "Saving..." : "Add Experience"}
         </button>
+        {submitMessage ? <p className="font-medium text-green-400">{submitMessage}</p> : null}
+        {submitError ? <p className="font-medium text-primary">{submitError}</p> : null}
       </form>
     </section>
   );

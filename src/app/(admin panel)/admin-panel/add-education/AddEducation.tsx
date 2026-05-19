@@ -24,6 +24,9 @@ const initialForm: EducationForm = {
 
 const AddEducation = () => {
   const [form, setForm] = useState<EducationForm>(initialForm);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+  const [submitError, setSubmitError] = useState("");
 
   const handleFieldChange = (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -36,7 +39,7 @@ const AddEducation = () => {
     }));
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const educationValues = {
@@ -50,6 +53,32 @@ const AddEducation = () => {
     };
 
     console.log("Education values:", educationValues);
+
+    setIsSubmitting(true);
+    setSubmitMessage("");
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/admin/education", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(educationValues),
+      });
+      const result = (await response.json()) as { message?: string; data?: unknown };
+
+      if (!response.ok) {
+        throw new Error(result.message ?? "Failed to create education.");
+      }
+
+      console.log("Saved education:", result.data);
+      setSubmitMessage(result.message ?? "Education created successfully.");
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "Failed to create education.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -176,10 +205,13 @@ const AddEducation = () => {
 
         <button
           type="submit"
-          className="bgcolor inline-flex items-center justify-center rounded-md px-10 py-3 font-semibold text-white transition hover:opacity-90"
+          disabled={isSubmitting}
+          className="bgcolor inline-flex items-center justify-center rounded-md px-10 py-3 font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          Add Education
+          {isSubmitting ? "Saving..." : "Add Education"}
         </button>
+        {submitMessage ? <p className="font-medium text-green-400">{submitMessage}</p> : null}
+        {submitError ? <p className="font-medium text-primary">{submitError}</p> : null}
       </form>
     </section>
   );

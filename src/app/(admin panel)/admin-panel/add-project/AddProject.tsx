@@ -58,6 +58,9 @@ const AddProject = () => {
   const [form, setForm] = useState<ProjectForm>(initialForm);
   const [thumbnail, setThumbnail] = useState<PreviewImage | null>(null);
   const [projectImages, setProjectImages] = useState<PreviewImage[]>([]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+  const [submitError, setSubmitError] = useState("");
   const thumbnailRef = useRef<PreviewImage | null>(null);
   const projectImagesRef = useRef<PreviewImage[]>([]);
 
@@ -168,7 +171,7 @@ const AddProject = () => {
 
   const cleanList = (items: string[]) => items.map((item) => item.trim()).filter(Boolean);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const projectValues = {
@@ -189,6 +192,50 @@ const AddProject = () => {
     };
 
     console.log("Project values:", projectValues);
+
+    if (!thumbnail) {
+      setSubmitError("Project thumbnail image is required.");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("title", form.title);
+    formData.append("date", form.date);
+    formData.append("website-link", form.websiteLink);
+    formData.append("playStore-link", form.playStoreLink);
+    formData.append("appStore-link", form.appStoreLink);
+    formData.append("description", form.description);
+    formData.append("role", form.role);
+    formData.append("responsibilities", JSON.stringify(cleanList(form.responsibilities)));
+    formData.append("features", JSON.stringify(cleanList(form.features)));
+    formData.append("technologies", JSON.stringify(cleanList(form.technologies)));
+    formData.append("thumbnail", thumbnail.file);
+    projectImages.forEach((image) => {
+      formData.append("images", image.file);
+    });
+
+    setIsSubmitting(true);
+    setSubmitMessage("");
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/admin/projects", {
+        method: "POST",
+        body: formData,
+      });
+      const result = (await response.json()) as { message?: string; data?: unknown };
+
+      if (!response.ok) {
+        throw new Error(result.message ?? "Failed to create project.");
+      }
+
+      console.log("Saved project:", result.data);
+      setSubmitMessage(result.message ?? "Project created successfully.");
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "Failed to create project.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const renderTextList = (key: TextListKey, label: string, placeholder: string) => (
@@ -469,10 +516,13 @@ const AddProject = () => {
 
         <button
           type="submit"
-          className="bgcolor inline-flex items-center justify-center rounded-md px-10 py-3 font-semibold text-white transition hover:opacity-90"
+          disabled={isSubmitting}
+          className="bgcolor inline-flex items-center justify-center rounded-md px-10 py-3 font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          Add Project
+          {isSubmitting ? "Saving..." : "Add Project"}
         </button>
+        {submitMessage ? <p className="font-medium text-green-400">{submitMessage}</p> : null}
+        {submitError ? <p className="font-medium text-primary">{submitError}</p> : null}
       </form>
     </section>
   );

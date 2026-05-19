@@ -60,6 +60,9 @@ const AddBlog = () => {
   const [selectedImages, setSelectedImages] = useState<PreviewImage[]>([]);
   const [editorReady, setEditorReady] = useState(false);
   const [descriptionError, setDescriptionError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+  const [submitError, setSubmitError] = useState("");
   const selectedImagesRef = useRef<PreviewImage[]>([]);
 
   useEffect(() => {
@@ -208,7 +211,7 @@ const AddBlog = () => {
     });
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (!description.replace(/<[^>]*>/g, "").trim()) {
@@ -227,6 +230,36 @@ const AddBlog = () => {
     };
 
     console.log("Blog values:", blogValues);
+
+    const formData = new FormData();
+    formData.append("title", title);
+    formData.append("description", description);
+    selectedImages.forEach((image) => {
+      formData.append("images", image.file);
+    });
+
+    setIsSubmitting(true);
+    setSubmitMessage("");
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/admin/blogs", {
+        method: "POST",
+        body: formData,
+      });
+      const result = (await response.json()) as { message?: string; data?: unknown };
+
+      if (!response.ok) {
+        throw new Error(result.message ?? "Failed to create blog.");
+      }
+
+      console.log("Saved blog:", result.data);
+      setSubmitMessage(result.message ?? "Blog created successfully.");
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "Failed to create blog.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -339,10 +372,13 @@ const AddBlog = () => {
 
         <button
           type="submit"
-          className="bgcolor inline-flex items-center justify-center rounded-md px-10 py-3 font-semibold text-white transition hover:opacity-90"
+          disabled={isSubmitting}
+          className="bgcolor inline-flex items-center justify-center rounded-md px-10 py-3 font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          Add Blog
+          {isSubmitting ? "Saving..." : "Add Blog"}
         </button>
+        {submitMessage ? <p className="font-medium text-green-400">{submitMessage}</p> : null}
+        {submitError ? <p className="font-medium text-primary">{submitError}</p> : null}
       </form>
     </section>
   );
