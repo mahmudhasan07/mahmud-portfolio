@@ -36,8 +36,8 @@ const Profile = () => {
     <h2 className="text-center text-white/80 text-xl font-semibold">Full Stack Developer</h2>
    <p className='my-3'>Full Stack Developer | React | Next | Node(MVC) | Express | MongoDB | Mongoose | Prisma | MySQL | JavaScript | Problem-solving. Creating the Future, One Line of Code at a Time.</p>
   <div>
-                        <p className='text-[#7C797A] font-semibold'>Phone: <span className='text-white font-normal'>01625598782</span></p>
-                        <p className='text-[#7C797A] font-semibold'>Email: <span className='text-white font-normal'>mahmudhasan.hb@gmail.com</span></p>
+   <p className='text-[#7C797A] font-semibold'>Phone: <span className='text-white font-normal'>01625598782</span></p>
+<p className='text-[#7C797A] font-semibold'>Email: <span className='text-white font-normal'>mahmudhasan.hb@gmail.com</span></p>
                     </div>
 </div>
       
