@@ -1,11 +1,13 @@
 import myImage from "@/assists/myProfile.png"
 import Image from "next/image";
 import Home from "./Home";
+import Home2 from "./Home2";
 
 export default function Page() {
     return (
        <div>
-        <Home></Home>
+        {/* <Home></Home> */}
+        <Home2></Home2>
        </div>
     );
 }
