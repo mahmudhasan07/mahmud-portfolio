@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import bgImage from "@/assists/newbg.jpg";
+import bgImage from "@/assists/newbg2.png";
 import myImage from "@/assists/myProfile1.png";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
@@ -93,7 +93,7 @@ export default function RootLayout({
       >
 
     <div className="absolute top-0 left-0 right-0 h-full">
-          <Image src={bgImage} height={0} width={3000} alt="" className="h-full"></Image>
+          <Image src={bgImage} height={0} width={0} alt="" className="h-full w-full object-center"></Image>
         </div>
 
         {/* <ParticlesBackground /> */}
