@@ -96,9 +96,9 @@ export default function RootLayout({
           <Image src={bgImage} height={0} width={0} alt="" className="h-full w-full object-center"></Image>
         </div>
 
-        {/* <ParticlesBackground /> */}
+        <ParticlesBackground />
 <div className="absolute top-0 left-0 right-0 backdrop-blur-sm min-h-screen w-full"></div>
-        <div className="relative container text-white pt-12 pb-2">
+        <div className="relative container text-white pt-12 pb-2 z-20" >
           {children}
         </div>
         <div className="fixed text-white container mx-auto w-fit left-1/2 -translate-x-1/2  bottom-1 ">

@@ -29,6 +29,7 @@ const ParticlesBackground = () => {
       id="tsparticles"
       particlesLoaded={particlesLoaded}
       options={options}
+      className="relative z-10"
     />
   );
 };
