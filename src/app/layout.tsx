@@ -102,7 +102,7 @@ export default function RootLayout({
           {children}
         </div>
         <div className="fixed text-white container mx-auto w-fit left-1/2 -translate-x-1/2  bottom-1 ">
-          <Navbar></Navbar>
+          {/* <Navbar></Navbar> */}
         </div>
       </body>
     </html>
