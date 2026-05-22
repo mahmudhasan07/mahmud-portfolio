@@ -97,12 +97,11 @@ export default function RootLayout({
         </div>
 
         <ParticlesBackground />
-<div className="absolute top-0 left-0 right-0 backdrop-blur-sm min-h-screen w-full"></div>
+<div className="absolute top-0 left-0 right-0 backdrop-blur-[2px] min-h-screen w-full"></div>
         <div className="relative container text-white pt-12 pb-2 z-20" >
           {children}
         </div>
         <div className="fixed text-white container mx-auto w-fit left-1/2 -translate-x-1/2  bottom-1 ">
-          {/* <Navbar></Navbar> */}
         </div>
       </body>
     </html>
