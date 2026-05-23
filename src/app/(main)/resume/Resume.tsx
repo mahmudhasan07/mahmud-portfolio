@@ -71,7 +71,7 @@ const Resume = ({ defaultTab = "Education", tabs = defaultTabs }: ResumeProps) =
                 }
             </div>
 
-            <div className='mt-5 pb-10 md:pb-8'>
+            <div className='pt-10'>
                 <motion.div
                     key={activeTab}
                     initial={{ opacity: 0, y: 10 }}

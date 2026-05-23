@@ -7,6 +7,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
 import ParticlesBackground from "@/components/ParticlesBackground/ParticlesBackground";
 import { baseUrl } from "@/Interfaces/BaseUrl";
+import PathnameLogger from "@/components/PathnameLogger";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -73,6 +74,7 @@ export const metadata: Metadata = {
 };
 
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -89,19 +91,21 @@ export default function RootLayout({
 
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative h-screen  `}
       >
 
     <div className="absolute top-0 left-0 right-0 h-full">
-          <Image src={bgImage} height={0} width={0} alt="" className="h-full w-full object-center"></Image>
+          <Image src={bgImage} height={0} width={0} alt="" className="w-full object-center h-screen"></Image>
         </div>
 
         <ParticlesBackground />
 <div className="absolute top-0 left-0 right-0 backdrop-blur-[2px] min-h-screen w-full"></div>
-        <div className="relative container text-white pt-5 pb-2 z-20" >
-          {children}
-        </div>
-        <div className="fixed text-white container mx-auto w-fit left-1/2 -translate-x-1/2  bottom-1 ">
+        <div className="relative overflow-y-auto h-screen text-white  pb-2 z-20" >
+<PathnameLogger/>
+<Navbar/>
+          <main className="container pt-5">
+            {children}
+          </main>
         </div>
       </body>
     </html>

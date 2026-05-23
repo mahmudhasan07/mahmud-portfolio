@@ -19,7 +19,7 @@ const Profile = () => {
   return (
     <section className="flex w-full flex-col gap-5 overflow-x-hidden lg:flex-row lg:items-stretch">
       {/* left side content */}
-      <div className="relative min-w-0 w-full space-y-3 overflow-hidden rounded-2xl border border-white/10 bg-[#030816]/70 p-5 shadow-[0_20px_70px_rgba(0,0,0,0.25)] backdrop-blur backdrop-saturate-150 lg:w-[40%]">
+      <div className="relative min-w-0 w-full space-y-5 overflow-hidden rounded-2xl border border-white/10 bg-[#030816]/70 p-5 shadow-[0_20px_70px_rgba(0,0,0,0.25)] backdrop-blur backdrop-saturate-150 lg:w-[40%]">
         {/* <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.22),rgba(255,255,255,0.06)_42%,rgba(109,104,255,0.16))]" />
         <div className="pointer-events-none absolute -left-20 -top-20 h-44 w-44 rounded-full bg-primary/25 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -right-16 h-48 w-48 rounded-full bg-secondary/25 blur-3xl" /> */}

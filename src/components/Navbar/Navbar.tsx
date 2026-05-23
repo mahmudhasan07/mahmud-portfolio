@@ -7,6 +7,7 @@ import { TiHome } from "react-icons/ti";
 import { GrProjects } from "react-icons/gr";
 import { CiMemoPad } from "react-icons/ci";
 import { MdContacts } from "react-icons/md";
+import { TbCode } from 'react-icons/tb';
 
 const Navbar = () => {
 
@@ -16,13 +17,20 @@ const Navbar = () => {
     const routes = [
         { route: "/", name: "Home", icon : <TiHome />  },
         { route: "/portfolio", name: "Portfolio", icon : <GrProjects /> },
-        { route: "/resume", name: "Resume", icon : <CiMemoPad /> },
+        // { route: "/resume", name: "Resume", icon : <CiMemoPad /> },
         { route: "/contact", name: "Contact Me", icon : <MdContacts /> },
     ];
 
     return (
-        <div className='text-white borderNew backdrop-blur-sm bg-black/30 md:px-12 px-8 py-3 rounded-lg w-fit mx-auto'>
-            <div className='space-x-3 flex gap-1'>
+        <section className='text-white fixed z-50 border border-white/10 bg-[#030816]/70  shadow-[0_20px_70px_rgba(0,0,0,0.25)] backdrop-blur backdrop-saturate-150 py-3 rounded-lg w-full mx-auto'>
+            <div className='flex justify-between container'>
+                <div className='flex gap-2'>
+                    <span className="grid h-9 w-9 place-items-center rounded-xl border border-secondary/30 bg-secondary/10 text-xl text-secondary">
+                              <TbCode />
+                            </span>
+                    <h1 className='text-center londrina text-xl font-bold md:text-2xl'>Mahmud Hasan Siddique</h1>
+                </div>
+                <div className='space-x-3 flex justify-center gap-1 flex-1'>
                 {routes.map((item, idx) => (
                     <motion.div
                         key={item.route}
@@ -32,7 +40,7 @@ const Navbar = () => {
                     >
                         <Link
                             href={item.route}
-                            className={`px-3 py-1 font-semibold text-lg text-white relative block ${path === item.route ? "bg-[#6D68FF] rounded-lg" : ""}`}
+                            className={`px-3 py-1 font-semibold relative block ${path === item.route ? "text-secondary rounded-lg" : " text-white"}`}
                         >
                             <AnimatePresence>
                                 {hoveredIndex === idx && (
@@ -65,7 +73,9 @@ const Navbar = () => {
                     </motion.div>
                 ))}
             </div>
-        </div>
+            </div>
+            
+        </section>
     );
 };
 
