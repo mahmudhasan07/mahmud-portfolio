@@ -2,37 +2,82 @@
 import React from 'react';
 import education from '@/assists/Education.json';
 import { motion } from 'framer-motion';
+import { TbAward, TbBook2, TbCalendar, TbSchool } from "react-icons/tb";
+
+const accentClasses = ["bg-sky-400", "bg-violet-400", "bg-amber-400"];
 
 const Education = () => {
     return (
-        <section>
-            <h1 className='lg:text-4xl md:text-3xl text-2xl londrina font-bold my-8'>Education Qualification</h1>
+        <section className="flex min-w-0 w-full flex-col gap-5 text-white lg:flex-1">
+            <div className="relative overflow-hidden">
+                <div className="pointer-events-none absolute -right-20 -top-20 h-44 w-44 rounded-full bg-secondary/20 blur-3xl" />
+                <div className="relative mb-5 flex items-center gap-3">
+                    <span className="grid h-9 w-9 place-items-center rounded-xl border border-secondary/30 bg-secondary/10 text-xl text-secondary">
+                        <TbSchool />
+                    </span>
+                    <h2 className="text-2xl font-bold">Education</h2>
+                </div>
 
-            <div className='space-y-5'>
-                {
-                    education.map((item, idx) => (
-                        <motion.div
-                            key={idx}
-                            className='space-y-2 p-5 borderNew2 text-start'
-                            initial={{ opacity: 0, y: 50 }}  // Initially hidden and moved down
-                            animate={{ opacity: 1, y: 0 }}   // Fade in and move up
-                            transition={{ duration: 0.5, delay: idx * 0.2 }}  // Staggered delay
-                        >
-                            <div className='flex justify-between'>
-                                <div className='space-y-1'>
-                                    <h2 className='text-2xl font-semibold'>{item.title}</h2>
-                                    <p className='font-semibold'>{item.institution}</p>
-                                    <p><span className='font-semibold'>Session:</span> {item.session}</p>
-                                    <p><span className='font-semibold'>Passing Year:</span> {item.endDate}</p>
+                <div className="relative space-y-3">
+                    {
+                        education.map((item, idx) => {
+                            const accentClass = accentClasses[idx % accentClasses.length];
+
+                            return (
+                                <motion.article
+                                    key={idx}
+                                    className="min-w-0 rounded-xl border border-white/10 bg-white/[0.03] p-3 transition duration-300 hover:-translate-y-1 hover:border-secondary/40 hover:bg-secondary/10"
+                                    initial={{ opacity: 0, y: 24 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.45, delay: idx * 0.12 }}
+                                >
+                                    <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                                        <div className="min-w-0">
+                                            <div className="mb-3 flex items-center gap-2">
+                                                <span className={`${accentClass} h-2 w-2 rounded-full`} />
+                                                <p className="text-sm font-semibold text-white/85">
+                                                    {item.institution}
+                                                </p>
+                                            </div>
+
+                                            <h3 className="text-lg font-semibold leading-snug text-white md:text-xl">
+                                                {item.title}
+                                            </h3>
+
+                                            <div className="mt-3 grid gap-2 text-xs text-white/55 sm:grid-cols-2">
+                                                <span className="flex min-w-0 items-center gap-2 rounded-lg border border-white/10 bg-[#081126] px-2 py-2">
+                                                    <TbBook2 className="shrink-0 text-base text-secondary" />
+                                                    <span className="min-w-0">Session: {item.session}</span>
+                                                </span>
+                                                <span className="flex min-w-0 items-center gap-2 rounded-lg border border-white/10 bg-[#081126] px-2 py-2">
+                                                    <TbCalendar className="shrink-0 text-base text-secondary" />
+                                                    <span className="min-w-0">Passing Year: {item.endDate}</span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex w-fit shrink-0 items-center gap-2 rounded-lg border border-secondary/30 bg-secondary/10 px-3 py-2">
+                                            <TbAward className="text-xl text-secondary" />
+                                            <div>
+                                                <p className="text-[10px] font-semibold uppercase text-white/45">
+                                                    CGPA
+                                                </p>
+                                                <p className="text-sm font-semibold text-white">
+                                                    {item.cgpa}/{item.outOf}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p className="mt-4 text-sm leading-6 text-white/70">
+                                        {item.description}
+                                    </p>
+                                </motion.article>
+                            );
+                        })
+                    }
                                 </div>
-                                <h1 className='bgcolor w-fit rounded-lg my-auto px-4 py-2 font-semibold'>{item.cgpa}/{item.outOf}</h1>
-                            </div>
-                            <p>{item.description}</p>
-                        </motion.div>
-                    ))
-                }
             </div>
-
         </section>
     );
 };
