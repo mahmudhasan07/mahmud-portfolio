@@ -7,7 +7,8 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
 import ParticlesBackground from "@/components/ParticlesBackground/ParticlesBackground";
 import { baseUrl } from "@/Interfaces/BaseUrl";
-import PathnameLogger from "@/components/PathnameLogger";
+import LayoutWrapper from "@/components/LayoutWrapper/LayoutWrapper";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -101,10 +102,11 @@ export default function RootLayout({
         <ParticlesBackground />
 <div className="absolute top-0 left-0 right-0 backdrop-blur-[2px] min-h-screen w-full"></div>
         <div className="relative overflow-y-auto h-screen text-white  pb-2 z-20" >
-<PathnameLogger/>
-<Navbar/>
-          <main className="container pt-5">
-            {children}
+
+          <main className="">
+            <LayoutWrapper>
+  {children}
+</LayoutWrapper>
           </main>
         </div>
       </body>

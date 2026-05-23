@@ -10,10 +10,63 @@ import { IoLogoGithub } from "react-icons/io";
 import {
   TbArrowRight,
   TbDownload,
+  TbMail,
+  TbMapPin,
+  TbPhone,
   TbRocket,
   TbSend,
 } from "react-icons/tb";
 import Resume from "./resume/Resume";
+type ContactMethod = {
+  label: string;
+  value: string;
+  href: string;
+  Icon: IconType;
+};
+
+const contactMethods: ContactMethod[] = [
+  {
+    label: "Phone",
+    value: "01625598782",
+    href: "tel:+8801625598782",
+    Icon: TbPhone,
+  },
+  {
+    label: "Email",
+    value: "mahmudhasan.hb@gmail.com",
+    href: "mailto:mahmudhasan.hb@gmail.com",
+    Icon: TbMail,
+  },
+  // {
+  //   label: "Location",
+  //   value: "Dhaka, Bangladesh",
+  //   href: "https://www.google.com/maps/search/Dhaka,+Bangladesh",
+  //   Icon: TbMapPin,
+  // },
+];
+
+const socialLinks = [
+  {
+    href: "https://www.facebook.com/mahmudnirob.t",
+    label: "Facebook",
+    Icon: FaFacebookF,
+  },
+  {
+    href: "https://www.linkedin.com/in/mahmud-hasan-siddique-8873b221a/",
+    label: "LinkedIn",
+    Icon: FaLinkedinIn,
+  },
+  {
+    href: "https://github.com/mahmudhasan07",
+    label: "GitHub",
+    Icon: IoLogoGithub,
+  },
+  {
+    href: "https://wa.me/8801625598782",
+    label: "WhatsApp",
+    Icon: FaWhatsapp,
+  },
+];
 
 const Profile = () => {
   return (
@@ -48,16 +101,28 @@ const Profile = () => {
             | Mongoose | Prisma | MySQL | JavaScript | Problem-solving.
             Creating the Future, One Line of Code at a Time.
           </p>
-          <div>
-            <p className="font-semibold text-[#7C797A]">
-              Phone: <span className="font-normal text-white">01625598782</span>
-            </p>
-            <p className="font-semibold text-[#7C797A]">
-              Email:{" "}
-              <span className="font-normal text-white">
-                mahmudhasan.hb@gmail.com
-              </span>
-            </p>
+           <div className="relative mt-5 space-y-2">
+            {contactMethods.map(({ label, value, href, Icon }) => (
+              <Link
+                key={label}
+                href={href}
+                target={label === "Location" ? "_blank" : undefined}
+                rel={label === "Location" ? "noreferrer" : undefined}
+                className="flex min-w-0 items-center gap-3 rounded-lg border border-white/10 bg-[#081126] p-2 transition hover:border-secondary/40 hover:bg-secondary/10"
+              >
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-secondary/30 bg-secondary/10 text-secondary">
+                  <Icon />
+                </span>
+                <span className="min-w-0">
+                  {/* <span className="block text-xs font-semibold text-white/45">
+                    {label}
+                  </span> */}
+                  <span className="block break-words text-sm font-medium text-white/80">
+                    {value}
+                  </span>
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
 
@@ -113,34 +178,18 @@ const Profile = () => {
         <div className="relative space-y-2">
           <p className="text-lg font-semibold">Find Me On:</p>
           <div className="flex gap-3">
-            <Link
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.facebook.com/mahmudnirob.t"
-            >
-              <FaFacebookF className="borderNew p-2 text-4xl" />
-            </Link>
-            <Link
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/mahmud-hasan-siddique-8873b221a/"
-            >
-              <FaLinkedinIn className="borderNew p-2 text-4xl" />
-            </Link>
-            <Link
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/mahmudhasan07"
-            >
-              <IoLogoGithub className="borderNew p-2 text-4xl" />
-            </Link>
-            <Link
-              target="_blank"
-              rel="noreferrer"
-              href="https://wa.me/8801625598782"
-            >
-              <FaWhatsapp className="borderNew p-2 text-4xl" />
-            </Link>
+           {socialLinks.map(({ href, label, Icon }) => (
+                <Link
+                  key={label}
+                  target="_blank"
+                  rel="noreferrer"
+                  href={href}
+                  aria-label={label}
+                  className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-[#081126] text-lg text-white/75 transition hover:border-secondary/40 hover:bg-secondary/10 hover:text-secondary"
+                >
+                  <Icon />
+                </Link>
+              ))}
           </div>
         </div>
       </div>
