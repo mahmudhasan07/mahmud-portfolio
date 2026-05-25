@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { TiHome } from "react-icons/ti";
 import { GrProjects } from "react-icons/gr";
 import { MdContacts } from "react-icons/md";
-import { TbCode, TbMenu2, TbX } from "react-icons/tb";
+import { TbArticle, TbCode, TbMenu2, TbX } from "react-icons/tb";
 
 const Navbar = () => {
   const path = usePathname();
@@ -16,6 +16,7 @@ const Navbar = () => {
   const routes = [
     { route: "/", name: "Home", icon: <TiHome /> },
     { route: "/portfolio", name: "Portfolio", icon: <GrProjects /> },
+    { route: "/blogs", name: "Blogs", icon: <TbArticle /> },
     // { route: "/resume", name: "Resume", icon : <CiMemoPad /> },
     { route: "/contact", name: "Contact Me", icon: <MdContacts /> },
   ];

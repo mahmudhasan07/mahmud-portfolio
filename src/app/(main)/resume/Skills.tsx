@@ -132,7 +132,7 @@ const Skills = () => {
                 <h3 className="font-semibold text-white/85">{group.title}</h3>
               </div>
 
-              <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+              <div className="grid grid-cols-2 gap-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
                 {group.skills.map(({ name, Icon, iconClass }) => (
                   <div
                     key={name}

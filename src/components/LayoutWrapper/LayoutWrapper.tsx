@@ -16,7 +16,7 @@ export default function LayoutWrapper({
     <>
       {!isHomePage && <Navbar />}
 
-      <main className={`container ${isHomePage ? "pt-5" : "pt-20"}`}>
+      <main className={`container ${isHomePage ? "pt-5" : "pt-24"}`}>
         {children}
       </main>
     </>
