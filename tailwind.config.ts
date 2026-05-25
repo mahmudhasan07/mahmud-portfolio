@@ -23,6 +23,12 @@ const config: Config = {
         secondary: "#6D68FF",
 
       },
+      fontFamily: {
+        sans: ["var(--font-body)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "var(--font-body)", "sans-serif"],
+        script: ["var(--font-script)", "cursive"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+      },
     },
   },
   plugins: [],

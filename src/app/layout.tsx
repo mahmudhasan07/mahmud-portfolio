@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Geist_Mono,
+  Kaushan_Script,
+  Orbitron,
+  Rajdhani,
+} from "next/font/google";
 import "./globals.css";
 import bgImage from "@/assists/newbg2.png";
 import myImage from "@/assists/myProfile1.png";
@@ -8,13 +13,29 @@ import ParticlesBackground from "@/components/ParticlesBackground/ParticlesBackg
 import { baseUrl } from "@/Interfaces/BaseUrl";
 import LayoutWrapper from "@/components/LayoutWrapper/LayoutWrapper";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const rajdhani = Rajdhani({
+  variable: "--font-body",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const orbitron = Orbitron({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["600", "700", "800", "900"],
+  display: "swap",
+});
+
+const kaushanScript = Kaushan_Script({
+  variable: "--font-script",
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+  variable: "--font-mono",
   subsets: ["latin"],
 });
 
@@ -83,14 +104,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
-          rel="stylesheet"
-        />
         <script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative h-screen  `}
+        className={`${rajdhani.variable} ${orbitron.variable} ${kaushanScript.variable} ${geistMono.variable} relative h-screen font-sans antialiased`}
       >
         <div className="absolute top-0 left-0 right-0 h-full">
           <Image

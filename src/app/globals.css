@@ -10,12 +10,24 @@ textarea {
   color: black;
 }
 
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-weight: 400;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
 .kaushan {
-  font-family: "Kaushan Script", cursive;
+  font-family: var(--font-script), cursive;
 }
 
 .londrina {
-  font-family: "Londrina Shadow", cursive;
+  font-family: var(--font-display), var(--font-body), sans-serif;
   -webkit-text-stroke: 1px white; /* outline */
   -webkit-text-fill-color: transparent; /* transparent inside */
   color: transparent; /* fallback */

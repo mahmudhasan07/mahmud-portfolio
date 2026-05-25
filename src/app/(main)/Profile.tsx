@@ -90,10 +90,10 @@ const Profile = () => {
         </div>
 
         <div className="relative">
-          <h1 className="londrina break-words text-center text-3xl font-extrabold text-transparent sm:text-4xl">
+          <h1 className="londrina text-center text-2xl font-extrabold text-transparent sm:text-3xl">
             Mahmud Hasan Siddique
           </h1>
-          <h2 className="text-center text-xl font-semibold text-white/80">
+          <h2 className="text-center text-xl font-semibold text-white/60">
             Full Stack Developer
           </h2>
           <p className="my-3">
