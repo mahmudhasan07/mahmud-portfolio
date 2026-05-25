@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import experiences from "@/assists/Experience.json";
 import { motion } from "framer-motion";
@@ -47,7 +47,8 @@ const Experience = () => {
 
                   <div className="flex w-fit shrink-0 items-center gap-2 rounded-lg border border-white/10 bg-[#081126] px-3 py-2 text-xs font-medium text-white/65">
                     <TbBuilding className="text-base text-secondary" />
-                    {exp.positions.length} Role{exp.positions.length > 1 ? "s" : ""}
+                    {exp.positions.length} Role
+                    {exp.positions.length > 1 ? "s" : ""}
                   </div>
                 </div>
 
@@ -58,7 +59,10 @@ const Experience = () => {
                       className="rounded-lg border border-white/10 bg-[#081126] p-3"
                       initial={{ opacity: 0, y: 14 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.35, delay: index * 0.12 + idx * 0.08 }}
+                      transition={{
+                        duration: 0.35,
+                        delay: index * 0.12 + idx * 0.08,
+                      }}
                     >
                       <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
                         <div className="min-w-0">

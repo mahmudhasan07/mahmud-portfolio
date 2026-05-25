@@ -11,12 +11,12 @@ import {
   TbArrowRight,
   TbDownload,
   TbMail,
-  TbMapPin,
   TbPhone,
   TbRocket,
   TbSend,
 } from "react-icons/tb";
 import Resume from "./resume/Resume";
+import { IconType } from "react-icons";
 type ContactMethod = {
   label: string;
   value: string;
@@ -98,10 +98,10 @@ const Profile = () => {
           </h2>
           <p className="my-3">
             Full Stack Developer | React | Next | Node(MVC) | Express | MongoDB
-            | Mongoose | Prisma | MySQL | JavaScript | Problem-solving.
-            Creating the Future, One Line of Code at a Time.
+            | Mongoose | Prisma | MySQL | JavaScript | Problem-solving. Creating
+            the Future, One Line of Code at a Time.
           </p>
-           <div className="relative mt-5 space-y-2">
+          <div className="relative mt-5 space-y-2">
             {contactMethods.map(({ label, value, href, Icon }) => (
               <Link
                 key={label}
@@ -178,18 +178,18 @@ const Profile = () => {
         <div className="relative space-y-2">
           <p className="text-lg font-semibold">Find Me On:</p>
           <div className="flex gap-3">
-           {socialLinks.map(({ href, label, Icon }) => (
-                <Link
-                  key={label}
-                  target="_blank"
-                  rel="noreferrer"
-                  href={href}
-                  aria-label={label}
-                  className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-[#081126] text-lg text-white/75 transition hover:border-secondary/40 hover:bg-secondary/10 hover:text-secondary"
-                >
-                  <Icon />
-                </Link>
-              ))}
+            {socialLinks.map(({ href, label, Icon }) => (
+              <Link
+                key={label}
+                target="_blank"
+                rel="noreferrer"
+                href={href}
+                aria-label={label}
+                className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-[#081126] text-lg text-white/75 transition hover:border-secondary/40 hover:bg-secondary/10 hover:text-secondary"
+              >
+                <Icon />
+              </Link>
+            ))}
           </div>
         </div>
       </div>

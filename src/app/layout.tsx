@@ -4,11 +4,9 @@ import "./globals.css";
 import bgImage from "@/assists/newbg2.png";
 import myImage from "@/assists/myProfile1.png";
 import Image from "next/image";
-import Navbar from "@/components/Navbar/Navbar";
 import ParticlesBackground from "@/components/ParticlesBackground/ParticlesBackground";
 import { baseUrl } from "@/Interfaces/BaseUrl";
 import LayoutWrapper from "@/components/LayoutWrapper/LayoutWrapper";
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mahmud Hasan Siddique | Full Stack Developer (React, Next.js, Node.js)",
+  title:
+    "Mahmud Hasan Siddique | Full Stack Developer (React, Next.js, Node.js)",
   description:
     "Welcome to the portfolio of Mahmud Hasan Siddique — a Full Stack Developer specializing in React, Next.js, Node.js (MVC), Express, MongoDB, Mongoose, Prisma, MySQL, and JavaScript. Passionate about building scalable systems, intuitive UI, and modern web applications that solve real-world problems.",
 
@@ -70,11 +69,11 @@ export const metadata: Metadata = {
     title: "Mahmud Hasan Siddique | Full Stack Developer",
     description:
       "View the portfolio of Full Stack Developer Mahmud Hasan Siddique and explore projects built with React, Next.js, Node.js, MongoDB & Prisma.",
-    images: ["https://res.cloudinary.com/daudgshta/image/upload/v1763525410/portfolio/home_xfkqsh.png"],
+    images: [
+      "https://res.cloudinary.com/daudgshta/image/upload/v1763525410/portfolio/home_xfkqsh.png",
+    ],
   },
 };
-
-
 
 export default function RootLayout({
   children,
@@ -89,24 +88,25 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
-
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative h-screen  `}
       >
-
-    <div className="absolute top-0 left-0 right-0 h-full">
-          <Image src={bgImage} height={0} width={0} alt="" className="w-full object-center h-screen"></Image>
+        <div className="absolute top-0 left-0 right-0 h-full">
+          <Image
+            src={bgImage}
+            height={0}
+            width={0}
+            alt=""
+            className="w-full object-center h-screen"
+          ></Image>
         </div>
 
         <ParticlesBackground />
-<div className="absolute top-0 left-0 right-0 backdrop-blur-[2px] min-h-screen w-full"></div>
-        <div className="relative overflow-y-auto h-screen text-white  pb-2 z-20" >
-
+        <div className="absolute top-0 left-0 right-0 backdrop-blur-[2px] min-h-screen w-full"></div>
+        <div className="relative overflow-y-auto h-screen text-white  pb-2 z-20">
           <main className="">
-            <LayoutWrapper>
-  {children}
-</LayoutWrapper>
+            <LayoutWrapper>{children}</LayoutWrapper>
           </main>
         </div>
       </body>
