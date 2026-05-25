@@ -273,7 +273,7 @@ const AddBlog = () => {
       setDescription("");
       selectedImages.forEach((image) => URL.revokeObjectURL(image.previewUrl));
       setSelectedImages([]);
-      window.tinymce?.get?.(editorId)?.setContent("");
+      window.tinymce?.get?.(editorId)?.setContent?.("");
     } catch (error) {
       setSubmitError(
         error instanceof Error ? error.message : "Failed to create blog.",
