@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import React from "react";
 import myImage from "@/assists/myProfile11.png";

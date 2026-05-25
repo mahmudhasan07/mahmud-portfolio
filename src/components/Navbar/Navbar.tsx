@@ -17,7 +17,6 @@ const Navbar = () => {
     { route: "/", name: "Home", icon: <TiHome /> },
     { route: "/portfolio", name: "Portfolio", icon: <GrProjects /> },
     { route: "/blogs", name: "Blogs", icon: <TbArticle /> },
-    // { route: "/resume", name: "Resume", icon : <CiMemoPad /> },
     { route: "/contact", name: "Contact Me", icon: <MdContacts /> },
   ];
 
