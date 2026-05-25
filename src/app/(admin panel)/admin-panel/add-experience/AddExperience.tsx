@@ -37,7 +37,8 @@ const initialForm: ExperienceForm = {
   positions: [emptyPosition],
 };
 
-const cleanList = (items: string[]) => items.map((item) => item.trim()).filter(Boolean);
+const cleanList = (items: string[]) =>
+  items.map((item) => item.trim()).filter(Boolean);
 
 const AddExperience = () => {
   const [form, setForm] = useState<ExperienceForm>(initialForm);
@@ -57,12 +58,12 @@ const AddExperience = () => {
   const handlePositionFieldChange = (
     positionIndex: number,
     field: PositionField,
-    value: string
+    value: string,
   ) => {
     setForm((currentForm) => ({
       ...currentForm,
       positions: currentForm.positions.map((position, index) =>
-        index === positionIndex ? { ...position, [field]: value } : position
+        index === positionIndex ? { ...position, [field]: value } : position,
       ),
     }));
   };
@@ -87,7 +88,7 @@ const AddExperience = () => {
   const handleSkillChange = (
     positionIndex: number,
     skillIndex: number,
-    value: string
+    value: string,
   ) => {
     setForm((currentForm) => ({
       ...currentForm,
@@ -96,10 +97,10 @@ const AddExperience = () => {
           ? {
               ...position,
               skills: position.skills.map((skill, currentSkillIndex) =>
-                currentSkillIndex === skillIndex ? value : skill
+                currentSkillIndex === skillIndex ? value : skill,
               ),
             }
-          : position
+          : position,
       ),
     }));
   };
@@ -110,7 +111,7 @@ const AddExperience = () => {
       positions: currentForm.positions.map((position, index) =>
         index === positionIndex
           ? { ...position, skills: [...position.skills, ""] }
-          : position
+          : position,
       ),
     }));
   };
@@ -125,9 +126,11 @@ const AddExperience = () => {
               skills:
                 position.skills.length === 1
                   ? [""]
-                  : position.skills.filter((_, indexToRemove) => indexToRemove !== skillIndex),
+                  : position.skills.filter(
+                      (_, indexToRemove) => indexToRemove !== skillIndex,
+                    ),
             }
-          : position
+          : position,
       ),
     }));
   };
@@ -163,7 +166,10 @@ const AddExperience = () => {
         },
         body: JSON.stringify(experienceValues),
       });
-      const result = (await response.json()) as { message?: string; data?: unknown };
+      const result = (await response.json()) as {
+        message?: string;
+        data?: unknown;
+      };
 
       if (!response.ok) {
         throw new Error(result.message ?? "Failed to create experience.");
@@ -171,8 +177,11 @@ const AddExperience = () => {
 
       console.log("Saved experience:", result.data);
       setSubmitMessage(result.message ?? "Experience created successfully.");
+      setForm(initialForm);
     } catch (error) {
-      setSubmitError(error instanceof Error ? error.message : "Failed to create experience.");
+      setSubmitError(
+        error instanceof Error ? error.message : "Failed to create experience.",
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -184,7 +193,10 @@ const AddExperience = () => {
         Add Experience
       </h1>
 
-      <form onSubmit={handleSubmit} className="borderNew mx-auto max-w-6xl space-y-6 p-4 md:p-8">
+      <form
+        onSubmit={handleSubmit}
+        className="borderNew mx-auto max-w-6xl space-y-6 p-4 md:p-8"
+      >
         <div className="grid gap-4 md:grid-cols-2">
           <div className="space-y-2">
             <label htmlFor="company" className="font-semibold">
@@ -251,7 +263,10 @@ const AddExperience = () => {
 
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-2">
-                  <label htmlFor={`title-${positionIndex}`} className="font-semibold">
+                  <label
+                    htmlFor={`title-${positionIndex}`}
+                    className="font-semibold"
+                  >
                     Title *
                   </label>
                   <input
@@ -260,7 +275,11 @@ const AddExperience = () => {
                     required
                     value={position.title}
                     onChange={(event) =>
-                      handlePositionFieldChange(positionIndex, "title", event.target.value)
+                      handlePositionFieldChange(
+                        positionIndex,
+                        "title",
+                        event.target.value,
+                      )
                     }
                     placeholder="Full Stack Developer"
                     className="w-full rounded-md border border-[#AAAAAA] p-3 text-white outline-none focus:border-secondary"
@@ -268,7 +287,10 @@ const AddExperience = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor={`employmentType-${positionIndex}`} className="font-semibold">
+                  <label
+                    htmlFor={`employmentType-${positionIndex}`}
+                    className="font-semibold"
+                  >
                     Employment Type *
                   </label>
                   <input
@@ -280,7 +302,7 @@ const AddExperience = () => {
                       handlePositionFieldChange(
                         positionIndex,
                         "employmentType",
-                        event.target.value
+                        event.target.value,
                       )
                     }
                     placeholder="Full-time"
@@ -291,7 +313,10 @@ const AddExperience = () => {
 
               <div className="grid gap-4 md:grid-cols-3">
                 <div className="space-y-2">
-                  <label htmlFor={`startDate-${positionIndex}`} className="font-semibold">
+                  <label
+                    htmlFor={`startDate-${positionIndex}`}
+                    className="font-semibold"
+                  >
                     Start Date *
                   </label>
                   <input
@@ -300,14 +325,21 @@ const AddExperience = () => {
                     required
                     value={position.startDate}
                     onChange={(event) =>
-                      handlePositionFieldChange(positionIndex, "startDate", event.target.value)
+                      handlePositionFieldChange(
+                        positionIndex,
+                        "startDate",
+                        event.target.value,
+                      )
                     }
                     className="w-full rounded-md border border-[#AAAAAA] p-3 text-white outline-none focus:border-secondary"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor={`endDate-${positionIndex}`} className="font-semibold">
+                  <label
+                    htmlFor={`endDate-${positionIndex}`}
+                    className="font-semibold"
+                  >
                     End Date *
                   </label>
                   <input
@@ -316,7 +348,11 @@ const AddExperience = () => {
                     required
                     value={position.endDate}
                     onChange={(event) =>
-                      handlePositionFieldChange(positionIndex, "endDate", event.target.value)
+                      handlePositionFieldChange(
+                        positionIndex,
+                        "endDate",
+                        event.target.value,
+                      )
                     }
                     placeholder="Present or 2025-12"
                     className="w-full rounded-md border border-[#AAAAAA] p-3 text-white outline-none focus:border-secondary"
@@ -324,7 +360,10 @@ const AddExperience = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor={`duration-${positionIndex}`} className="font-semibold">
+                  <label
+                    htmlFor={`duration-${positionIndex}`}
+                    className="font-semibold"
+                  >
                     Duration *
                   </label>
                   <input
@@ -333,7 +372,11 @@ const AddExperience = () => {
                     required
                     value={position.duration}
                     onChange={(event) =>
-                      handlePositionFieldChange(positionIndex, "duration", event.target.value)
+                      handlePositionFieldChange(
+                        positionIndex,
+                        "duration",
+                        event.target.value,
+                      )
                     }
                     placeholder="1.4 yr"
                     className="w-full rounded-md border border-[#AAAAAA] p-3 text-white outline-none focus:border-secondary"
@@ -342,7 +385,10 @@ const AddExperience = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor={`description-${positionIndex}`} className="font-semibold">
+                <label
+                  htmlFor={`description-${positionIndex}`}
+                  className="font-semibold"
+                >
                   Description *
                 </label>
                 <textarea
@@ -350,7 +396,11 @@ const AddExperience = () => {
                   required
                   value={position.description}
                   onChange={(event) =>
-                    handlePositionFieldChange(positionIndex, "description", event.target.value)
+                    handlePositionFieldChange(
+                      positionIndex,
+                      "description",
+                      event.target.value,
+                    )
                   }
                   placeholder="Write the work description"
                   className="min-h-32 w-full rounded-md border border-[#AAAAAA] p-3 text-white outline-none focus:border-secondary"
@@ -372,13 +422,20 @@ const AddExperience = () => {
 
                 <div className="grid gap-3 md:grid-cols-2">
                   {position.skills.map((skill, skillIndex) => (
-                    <div key={`skill-${positionIndex}-${skillIndex}`} className="flex gap-2">
+                    <div
+                      key={`skill-${positionIndex}-${skillIndex}`}
+                      className="flex gap-2"
+                    >
                       <input
                         type="text"
                         required={skillIndex === 0}
                         value={skill}
                         onChange={(event) =>
-                          handleSkillChange(positionIndex, skillIndex, event.target.value)
+                          handleSkillChange(
+                            positionIndex,
+                            skillIndex,
+                            event.target.value,
+                          )
                         }
                         placeholder={`Skill ${skillIndex + 1}`}
                         className="w-full rounded-md border border-[#AAAAAA] p-3 text-white outline-none focus:border-secondary"
@@ -406,8 +463,12 @@ const AddExperience = () => {
         >
           {isSubmitting ? "Saving..." : "Add Experience"}
         </button>
-        {submitMessage ? <p className="font-medium text-green-400">{submitMessage}</p> : null}
-        {submitError ? <p className="font-medium text-primary">{submitError}</p> : null}
+        {submitMessage ? (
+          <p className="font-medium text-green-400">{submitMessage}</p>
+        ) : null}
+        {submitError ? (
+          <p className="font-medium text-primary">{submitError}</p>
+        ) : null}
       </form>
     </section>
   );

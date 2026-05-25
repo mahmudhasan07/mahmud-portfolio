@@ -78,12 +78,14 @@ const AddProject = () => {
         URL.revokeObjectURL(thumbnailRef.current.previewUrl);
       }
 
-      projectImagesRef.current.forEach((image) => URL.revokeObjectURL(image.previewUrl));
+      projectImagesRef.current.forEach((image) =>
+        URL.revokeObjectURL(image.previewUrl),
+      );
     };
   }, []);
 
   const handleFieldChange = (
-    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = event.target;
 
@@ -97,7 +99,7 @@ const AddProject = () => {
     setForm((currentForm) => ({
       ...currentForm,
       [key]: currentForm[key].map((item, itemIndex) =>
-        itemIndex === index ? value : item
+        itemIndex === index ? value : item,
       ),
     }));
   };
@@ -149,7 +151,7 @@ const AddProject = () => {
 
   const handleProjectImagesChange = (event: ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files ?? []).filter((file) =>
-      file.type.startsWith("image/")
+      file.type.startsWith("image/"),
     );
 
     const images = files.map((file, index) => createPreviewImage(file, index));
@@ -169,7 +171,8 @@ const AddProject = () => {
     });
   };
 
-  const cleanList = (items: string[]) => items.map((item) => item.trim()).filter(Boolean);
+  const cleanList = (items: string[]) =>
+    items.map((item) => item.trim()).filter(Boolean);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -206,9 +209,15 @@ const AddProject = () => {
     formData.append("appStore-link", form.appStoreLink);
     formData.append("description", form.description);
     formData.append("role", form.role);
-    formData.append("responsibilities", JSON.stringify(cleanList(form.responsibilities)));
+    formData.append(
+      "responsibilities",
+      JSON.stringify(cleanList(form.responsibilities)),
+    );
     formData.append("features", JSON.stringify(cleanList(form.features)));
-    formData.append("technologies", JSON.stringify(cleanList(form.technologies)));
+    formData.append(
+      "technologies",
+      JSON.stringify(cleanList(form.technologies)),
+    );
     formData.append("thumbnail", thumbnail.file);
     projectImages.forEach((image) => {
       formData.append("images", image.file);
@@ -223,7 +232,10 @@ const AddProject = () => {
         method: "POST",
         body: formData,
       });
-      const result = (await response.json()) as { message?: string; data?: unknown };
+      const result = (await response.json()) as {
+        message?: string;
+        data?: unknown;
+      };
 
       if (!response.ok) {
         throw new Error(result.message ?? "Failed to create project.");
@@ -231,14 +243,27 @@ const AddProject = () => {
 
       console.log("Saved project:", result.data);
       setSubmitMessage(result.message ?? "Project created successfully.");
+      if (thumbnail) {
+        URL.revokeObjectURL(thumbnail.previewUrl);
+      }
+      projectImages.forEach((image) => URL.revokeObjectURL(image.previewUrl));
+      setForm(initialForm);
+      setThumbnail(null);
+      setProjectImages([]);
     } catch (error) {
-      setSubmitError(error instanceof Error ? error.message : "Failed to create project.");
+      setSubmitError(
+        error instanceof Error ? error.message : "Failed to create project.",
+      );
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const renderTextList = (key: TextListKey, label: string, placeholder: string) => (
+  const renderTextList = (
+    key: TextListKey,
+    label: string,
+    placeholder: string,
+  ) => (
     <div className="space-y-3">
       <div className="flex items-center justify-between gap-3">
         <label className="font-semibold">{label} *</label>
@@ -259,7 +284,9 @@ const AddProject = () => {
               type="text"
               required={index === 0}
               value={item}
-              onChange={(event) => handleListChange(key, index, event.target.value)}
+              onChange={(event) =>
+                handleListChange(key, index, event.target.value)
+              }
               placeholder={`${placeholder} ${index + 1}`}
               className="w-full rounded-md border border-[#AAAAAA] p-3 text-white outline-none focus:border-secondary"
             />
@@ -283,7 +310,10 @@ const AddProject = () => {
         Add Project
       </h1>
 
-      <form onSubmit={handleSubmit} className="borderNew mx-auto max-w-6xl space-y-6 p-4 md:p-8">
+      <form
+        onSubmit={handleSubmit}
+        className="borderNew mx-auto max-w-6xl space-y-6 p-4 md:p-8"
+      >
         <div className="grid gap-4 md:grid-cols-2">
           <div className="space-y-2">
             <label htmlFor="title" className="font-semibold">
@@ -435,7 +465,9 @@ const AddProject = () => {
             >
               <FiUploadCloud className="text-4xl text-secondary" />
               <span className="font-semibold">Choose thumbnail image</span>
-              <span className="text-sm text-white/60">One main preview image for the project</span>
+              <span className="text-sm text-white/60">
+                One main preview image for the project
+              </span>
             </label>
           )}
 
@@ -459,7 +491,9 @@ const AddProject = () => {
           >
             <FiUploadCloud className="text-4xl text-secondary" />
             <span className="font-semibold">Choose project gallery images</span>
-            <span className="text-sm text-white/60">Upload all screenshots or project images</span>
+            <span className="text-sm text-white/60">
+              Upload all screenshots or project images
+            </span>
           </label>
 
           <input
@@ -510,7 +544,11 @@ const AddProject = () => {
           ) : null}
         </div>
 
-        {renderTextList("responsibilities", "Responsibilities", "Responsibility")}
+        {renderTextList(
+          "responsibilities",
+          "Responsibilities",
+          "Responsibility",
+        )}
         {renderTextList("features", "Features", "Feature")}
         {renderTextList("technologies", "Technologies", "Technology")}
 
@@ -521,8 +559,12 @@ const AddProject = () => {
         >
           {isSubmitting ? "Saving..." : "Add Project"}
         </button>
-        {submitMessage ? <p className="font-medium text-green-400">{submitMessage}</p> : null}
-        {submitError ? <p className="font-medium text-primary">{submitError}</p> : null}
+        {submitMessage ? (
+          <p className="font-medium text-green-400">{submitMessage}</p>
+        ) : null}
+        {submitError ? (
+          <p className="font-medium text-primary">{submitError}</p>
+        ) : null}
       </form>
     </section>
   );

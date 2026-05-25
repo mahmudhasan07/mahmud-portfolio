@@ -1,6 +1,13 @@
 "use client";
 
-import { ChangeEvent, FormEvent, useEffect, useId, useRef, useState } from "react";
+import {
+  ChangeEvent,
+  FormEvent,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+} from "react";
 import { FiImage, FiUploadCloud, FiX } from "react-icons/fi";
 
 const TINY_API_KEY = "y5ptvwx6va2ot9598uiaqpyk2utb8tcqbwookld4l6jpwkwh";
@@ -8,6 +15,7 @@ const TINY_SCRIPT_ID = "tiny-cloud-script";
 
 type TinyEditor = {
   getContent: () => string;
+  setContent?: (content: string) => void;
   on: (events: string, callback: () => void) => void;
   remove: () => void;
 };
@@ -86,7 +94,8 @@ const AddBlog = () => {
           "undo redo | blocks fontfamily fontsize lineheight | bold italic underline strikethrough superscript subscript | forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styles | link image media table | removeformat preview code",
         font_family_formats:
           "Inter=Inter,Arial,sans-serif; Arial=arial,helvetica,sans-serif; Georgia=georgia,palatino,serif; Times New Roman=times new roman,times,serif; Courier New=courier new,courier,monospace; Verdana=verdana,geneva,sans-serif; Tahoma=tahoma,arial,helvetica,sans-serif; Trebuchet MS=trebuchet ms,geneva,sans-serif; Impact=impact,chicago; Kaushan Script='Kaushan Script',cursive",
-        font_size_formats: "12px 14px 16px 18px 20px 24px 28px 32px 36px 42px 48px",
+        font_size_formats:
+          "12px 14px 16px 18px 20px 24px 28px 32px 36px 42px 48px",
         line_height_formats: "1 1.2 1.4 1.6 1.8 2 2.4",
         style_formats: [
           {
@@ -177,13 +186,15 @@ const AddBlog = () => {
 
   useEffect(() => {
     return () => {
-      selectedImagesRef.current.forEach((image) => URL.revokeObjectURL(image.previewUrl));
+      selectedImagesRef.current.forEach((image) =>
+        URL.revokeObjectURL(image.previewUrl),
+      );
     };
   }, []);
 
   const handleImageChange = (event: ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files ?? []).filter((file) =>
-      file.type.startsWith("image/")
+      file.type.startsWith("image/"),
     );
 
     const images = files.map((file, index) => ({
@@ -247,7 +258,10 @@ const AddBlog = () => {
         method: "POST",
         body: formData,
       });
-      const result = (await response.json()) as { message?: string; data?: unknown };
+      const result = (await response.json()) as {
+        message?: string;
+        data?: unknown;
+      };
 
       if (!response.ok) {
         throw new Error(result.message ?? "Failed to create blog.");
@@ -255,8 +269,15 @@ const AddBlog = () => {
 
       console.log("Saved blog:", result.data);
       setSubmitMessage(result.message ?? "Blog created successfully.");
+      setTitle("");
+      setDescription("");
+      selectedImages.forEach((image) => URL.revokeObjectURL(image.previewUrl));
+      setSelectedImages([]);
+      window.tinymce?.get?.(editorId)?.setContent("");
     } catch (error) {
-      setSubmitError(error instanceof Error ? error.message : "Failed to create blog.");
+      setSubmitError(
+        error instanceof Error ? error.message : "Failed to create blog.",
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -268,7 +289,10 @@ const AddBlog = () => {
         Add Blog
       </h1>
 
-      <form onSubmit={handleSubmit} className="borderNew mx-auto max-w-5xl space-y-6 p-4 md:p-8">
+      <form
+        onSubmit={handleSubmit}
+        className="borderNew mx-auto max-w-5xl space-y-6 p-4 md:p-8"
+      >
         <div className="space-y-2">
           <label htmlFor="blog-title" className="font-semibold">
             Title *
@@ -306,7 +330,9 @@ const AddBlog = () => {
             className="min-h-72 w-full rounded-md border border-[#AAAAAA] p-3 text-white outline-none focus:border-secondary"
           />
           {descriptionError ? (
-            <p className="text-sm font-medium text-primary">{descriptionError}</p>
+            <p className="text-sm font-medium text-primary">
+              {descriptionError}
+            </p>
           ) : null}
         </div>
 
@@ -319,7 +345,9 @@ const AddBlog = () => {
           >
             <FiUploadCloud className="text-4xl text-secondary" />
             <span className="font-semibold">Choose blog images</span>
-            <span className="text-sm text-white/60">PNG, JPG, WEBP, or GIF files</span>
+            <span className="text-sm text-white/60">
+              PNG, JPG, WEBP, or GIF files
+            </span>
           </label>
 
           <input
@@ -377,8 +405,12 @@ const AddBlog = () => {
         >
           {isSubmitting ? "Saving..." : "Add Blog"}
         </button>
-        {submitMessage ? <p className="font-medium text-green-400">{submitMessage}</p> : null}
-        {submitError ? <p className="font-medium text-primary">{submitError}</p> : null}
+        {submitMessage ? (
+          <p className="font-medium text-green-400">{submitMessage}</p>
+        ) : null}
+        {submitError ? (
+          <p className="font-medium text-primary">{submitError}</p>
+        ) : null}
       </form>
     </section>
   );

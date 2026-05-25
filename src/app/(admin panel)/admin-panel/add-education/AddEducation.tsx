@@ -29,7 +29,7 @@ const AddEducation = () => {
   const [submitError, setSubmitError] = useState("");
 
   const handleFieldChange = (
-    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = event.target;
 
@@ -66,7 +66,10 @@ const AddEducation = () => {
         },
         body: JSON.stringify(educationValues),
       });
-      const result = (await response.json()) as { message?: string; data?: unknown };
+      const result = (await response.json()) as {
+        message?: string;
+        data?: unknown;
+      };
 
       if (!response.ok) {
         throw new Error(result.message ?? "Failed to create education.");
@@ -74,8 +77,11 @@ const AddEducation = () => {
 
       console.log("Saved education:", result.data);
       setSubmitMessage(result.message ?? "Education created successfully.");
+      setForm(initialForm);
     } catch (error) {
-      setSubmitError(error instanceof Error ? error.message : "Failed to create education.");
+      setSubmitError(
+        error instanceof Error ? error.message : "Failed to create education.",
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -87,7 +93,10 @@ const AddEducation = () => {
         Add Education
       </h1>
 
-      <form onSubmit={handleSubmit} className="borderNew mx-auto max-w-5xl space-y-6 p-4 md:p-8">
+      <form
+        onSubmit={handleSubmit}
+        className="borderNew mx-auto max-w-5xl space-y-6 p-4 md:p-8"
+      >
         <div className="grid gap-4 md:grid-cols-2">
           <div className="space-y-2">
             <label htmlFor="title" className="font-semibold">
@@ -210,8 +219,12 @@ const AddEducation = () => {
         >
           {isSubmitting ? "Saving..." : "Add Education"}
         </button>
-        {submitMessage ? <p className="font-medium text-green-400">{submitMessage}</p> : null}
-        {submitError ? <p className="font-medium text-primary">{submitError}</p> : null}
+        {submitMessage ? (
+          <p className="font-medium text-green-400">{submitMessage}</p>
+        ) : null}
+        {submitError ? (
+          <p className="font-medium text-primary">{submitError}</p>
+        ) : null}
       </form>
     </section>
   );
